@@ -17,4 +17,6 @@ flowchart TD
 ```
 ````
 
-![alt text](image.png)
+<div align="center">
+  <img src="image.png" alt="sample" width="400" height="500" />
+</div>
