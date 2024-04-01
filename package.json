@@ -1,0 +1,27 @@
+{
+  "name": "rspress-plugin-mermaid",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w",
+    "docs:build": "rspress build",
+    "docs:dev": "rspress dev"
+  },
+  "dependencies": {
+    "@rspress/shared": "^1.16.2",
+    "mermaid": "^10.9.0",
+    "rspress": "^1.16.2",
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/mdast": "^3",
+    "@types/node": "^20.12.2",
+    "@types/react": "^18.2.73",
+    "mdast-util-mdxjs-esm": "^2.0.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "typescript": "^5",
+    "unified": "^10",
+    "unist-util-visit": "^4"
+  }
+}
