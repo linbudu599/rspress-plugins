@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "ES2022",
+    "jsx": "react-jsx",
+    "declaration": true,
+    "lib": ["es2022", "esnext", "dom"],
+    "sourceMap": false,
+    "declarationMap": true,
+    "skipLibCheck": true,
+    "strictNullChecks": true,
+    "skipDefaultLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "allowJs": true,
+    "outDir": "dist",
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  }
+}
