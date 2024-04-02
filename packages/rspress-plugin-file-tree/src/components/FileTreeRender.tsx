@@ -2,6 +2,7 @@ import React from 'react';
 import { GeistProvider, CssBaseline } from '@geist-ui/core';
 import { Tree } from '@geist-ui/core';
 
+// TODO: parse input tree structure
 interface FileTreeRendererProps {
   struct: string;
 }
