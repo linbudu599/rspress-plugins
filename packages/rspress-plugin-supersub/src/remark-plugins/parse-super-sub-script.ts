@@ -1,16 +1,12 @@
-import { visit } from 'unist-util-visit';
-
-import type { Plugin } from 'unified';
-import type { Root } from 'mdast';
+import { unistVisit, type RemarkPluginFactory } from 'rspress-plugin-devkit';
 
 interface RemarkParseSuperSubScriptOptions {}
 
-export const remarkParseSuperSubScript: Plugin<
-  [RemarkParseSuperSubScriptOptions],
-  Root
+export const remarkParseSuperSubScript: RemarkPluginFactory<
+  RemarkParseSuperSubScriptOptions
 > = () => {
   return (tree, vfile) => {
-    visit(tree, 'text', (node, i, parent) => {
+    unistVisit(tree, 'text', (node, i, parent) => {
       const { value } = node;
 
       const values = value.split(/\^/);
@@ -44,7 +40,7 @@ export const remarkParseSuperSubScript: Plugin<
     });
 
     // Subscript
-    visit<Root, 'text'>(tree, (node, i, parent) => {
+    unistVisit(tree, 'text', (node, i, parent) => {
       if (node.type !== 'text') {
         return;
       }

@@ -10,15 +10,16 @@
   },
   "dependencies": {
     "@rspress/shared": "^1.16.2",
-    "unist-util-visit": "^5.0.0"
-  },
-  "devDependencies": {
+    "@types/hast": "^3",
     "@types/mdast": "^3",
     "@types/node": "^20.12.2",
-    "@types/react": "^18.2.73",
-    "react": "^18",
-    "react-dom": "^18",
-    "typescript": "^5",
-    "unified": "^10"
-  }
+    "mdast-util-from-markdown": "^1.0.0",
+    "mdast-util-to-markdown": "^1.5.0",
+    "unified": "^10",
+    "unist-util-visit": "^5.0.0",
+    "unist-util-visit-parents": "^6.0.1",
+    "vfile": "^5.3.7",
+    "vfile-reporter": "^7.0.5"
+  },
+  "devDependencies": {}
 }
