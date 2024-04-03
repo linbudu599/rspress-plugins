@@ -15,7 +15,7 @@ export default function rspressPluginSupersub(): RspressPlugin {
       return config;
     },
     markdown: {
-      // remarkPlugins: [remarkParseSuperSubScript],
+      remarkPlugins: [remarkParseSuperSubScript],
     },
   };
 }

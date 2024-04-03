@@ -1,4 +1,4 @@
 # RSPress x SuperSub
 
-- H~2~O
+- H_2_O
 - 2^10^

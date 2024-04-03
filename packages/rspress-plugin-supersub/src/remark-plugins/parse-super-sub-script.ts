@@ -1,81 +1,65 @@
 import { unistVisit, type RemarkPluginFactory } from 'rspress-plugin-devkit';
 
-interface RemarkParseSuperSubScriptOptions {}
+interface RemarkParseSuperSubScriptOptions {
+  superSyntax?: string;
+  subSyntax?: string;
+}
 
 export const remarkParseSuperSubScript: RemarkPluginFactory<
   RemarkParseSuperSubScriptOptions
-> = () => {
+> = (options) => {
+  const { superSyntax = '^', subSyntax = '_' } = options ?? {};
+
+  const superSyntaxRegex = new RegExp(`\\${superSyntax}`);
+  const subSyntaxRegex = new RegExp(`\\${subSyntax}`);
+
+  const syntaxReplacers = [
+    {
+      regex: superSyntaxRegex,
+      type: 'superscript',
+      tagName: 'sup',
+    },
+    {
+      regex: subSyntaxRegex,
+      type: 'subscript',
+      tagName: 'sub',
+    },
+  ];
+
   return (tree, vfile) => {
     unistVisit(tree, 'text', (node, i, parent) => {
       const { value } = node;
 
-      const values = value.split(/\^/);
+      syntaxReplacers.forEach(({ regex, type, tagName }) => {
+        const values = value.split(regex);
 
-      if (values.length === 1 || values.length % 2 === 0) {
-        return;
-      }
+        if (values.length === 1 || values.length % 2 === 0) {
+          return;
+        }
 
-      const children = values.map((str, i) =>
-        i % 2 === 0
-          ? {
-              type: 'text',
-              value: str,
-            }
-          : {
-              type: 'superscript',
-              data: {
-                hName: 'sup',
-              },
-              children: [
-                {
-                  type: 'text',
-                  value: str,
+        const children = values.map((str, i) =>
+          i % 2 === 0
+            ? {
+                type: 'text',
+                value: str,
+              }
+            : {
+                type,
+                data: {
+                  hName: tagName,
                 },
-              ],
-            },
-      );
-
-      // @ts-expect-error
-      parent!.children?.splice(i!, 1, ...children);
-    });
-
-    // Subscript
-    unistVisit(tree, 'text', (node, i, parent) => {
-      if (node.type !== 'text') {
-        return;
-      }
-
-      const { value } = node;
-
-      // eslint-disable-next-line no-useless-escape
-      const values = value.split(/\&/);
-
-      if (values.length === 1 || values.length % 2 === 0) {
-        return;
-      }
-
-      const children = values.map((str, i) =>
-        i % 2 === 0
-          ? {
-              type: 'text',
-              value: str,
-            }
-          : {
-              type: 'subscript',
-              data: {
-                hName: 'sub',
+                children: [
+                  {
+                    type: 'text',
+                    value: str,
+                  },
+                ],
               },
-              children: [
-                {
-                  type: 'text',
-                  value: str,
-                },
-              ],
-            },
-      );
+        );
 
-      // @ts-expect-error
-      parent!.children.splice(i!, 1, ...children);
+        // @ts-expect-error
+        parent!.children.splice(i!, 1, ...children);
+      });
     });
   };
 };
