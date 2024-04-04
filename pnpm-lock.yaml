@@ -85,6 +85,52 @@ importers:
         specifier: ^16
         version: 16.18.93
 
+  packages/rspress-plugin-back-to-top:
+    dependencies:
+      '@rspress/shared':
+        specifier: ^1.16.2
+        version: 1.16.2
+      clsx:
+        specifier: ^2.1.0
+        version: 2.1.0
+      radash:
+        specifier: ^12.1.0
+        version: 12.1.0
+      rspress:
+        specifier: ^1.16.2
+        version: 1.16.2(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../rspress-plugin-devkit
+      unist-util-visit:
+        specifier: ^5.0.0
+        version: 5.0.0
+    devDependencies:
+      '@types/mdast':
+        specifier: ^3
+        version: 3.0.15
+      '@types/node':
+        specifier: ^20.12.2
+        version: 20.12.2
+      '@types/react':
+        specifier: ^18.2.73
+        version: 18.2.73
+      mdast-util-mdxjs-esm:
+        specifier: ^2.0.1
+        version: 2.0.1
+      react:
+        specifier: ^18
+        version: 18.2.0
+      react-dom:
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
+      typescript:
+        specifier: ^5
+        version: 5.4.3
+      unified:
+        specifier: ^10
+        version: 10.1.2
+
   packages/rspress-plugin-devkit:
     dependencies:
       '@rspress/shared':
@@ -6170,6 +6216,11 @@ packages:
     resolution: {integrity: sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==}
     engines: {node: '>=8'}
     dev: true
+
+  /radash@12.1.0:
+    resolution: {integrity: sha512-b0Zcf09AhqKS83btmUeYBS8tFK7XL2e3RvLmZcm0sTdF1/UUlHSsjXdCcWNxe7yfmAlPve5ym0DmKGtTzP6kVQ==}
+    engines: {node: '>=14.18.0'}
+    dev: false
 
   /randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}

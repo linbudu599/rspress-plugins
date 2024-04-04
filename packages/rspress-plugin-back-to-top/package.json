@@ -1,0 +1,33 @@
+{
+  "name": "rspress-plugin-back-to-top",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc --declarationMap false",
+    "dev": "tsc -w",
+    "docs:build": "rspress build",
+    "docs:dev": "rspress dev"
+  },
+  "dependencies": {
+    "@rspress/shared": "^1.16.2",
+    "clsx": "^2.1.0",
+    "radash": "^12.1.0",
+    "rspress": "^1.16.2",
+    "rspress-plugin-devkit": "workspace:^",
+    "unist-util-visit": "^5.0.0"
+  },
+  "peerDependencies": {
+    "rspress": "*"
+  },
+  "devDependencies": {
+    "@types/mdast": "^3",
+    "@types/node": "^20.12.2",
+    "@types/react": "^18.2.73",
+    "mdast-util-mdxjs-esm": "^2.0.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "typescript": "^5",
+    "unified": "^10",
+    "unist-util-visit": "^4"
+  }
+}
