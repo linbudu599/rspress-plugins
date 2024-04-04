@@ -1,0 +1,27 @@
+{
+  "name": "rspress-plugin-gh-pages",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc --declarationMap false",
+    "dev": "tsc -w",
+    "docs:build": "rspress build",
+    "docs:dev": "rspress dev"
+  },
+  "dependencies": {
+    "@rspress/shared": "^1.16.2",
+    "gh-pages": "^6.1.1",
+    "rspress-plugin-devkit": "workspace:^"
+  },
+  "peerDependencies": {
+    "rspress": "*"
+  },
+  "devDependencies": {
+    "@types/gh-pages": "^6.1.0",
+    "@types/node": "^20.12.2",
+    "@types/react": "^18.2.73",
+    "react": "^18",
+    "react-dom": "^18",
+    "typescript": "^5"
+  }
+}
