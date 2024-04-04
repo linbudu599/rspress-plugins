@@ -1,5 +1,5 @@
 {
-  "name": "rspress-plugin-_PLUGIN_NAME_",
+  "name": "rspress-plugin-live2d",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@rspress/shared": "^1.16.2",
+    "oh-my-live2d": "^0.15.2",
     "rspress-plugin-devkit": "workspace:^"
   },
   "peerDependencies": {

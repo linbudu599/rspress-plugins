@@ -1,1 +1,1 @@
-# rspress-plugin-back-to-top
+# rspress-plugin-_PLUGIN_NAME_

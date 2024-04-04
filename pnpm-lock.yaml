@@ -201,6 +201,37 @@ importers:
         specifier: ^5
         version: 5.4.3
 
+  packages/rspress-plugin-live2d:
+    dependencies:
+      '@rspress/shared':
+        specifier: ^1.16.2
+        version: 1.16.2
+      oh-my-live2d:
+        specifier: ^0.15.2
+        version: 0.15.2
+      rspress:
+        specifier: '*'
+        version: 1.16.2(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../rspress-plugin-devkit
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.2
+        version: 20.12.2
+      '@types/react':
+        specifier: ^18.2.73
+        version: 18.2.73
+      react:
+        specifier: ^18
+        version: 18.2.0
+      react-dom:
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
+      typescript:
+        specifier: ^5
+        version: 5.4.3
+
   packages/rspress-plugin-mermaid:
     dependencies:
       '@rspress/shared':
@@ -5825,6 +5856,10 @@ packages:
       has-symbols: 1.0.3
       object-keys: 1.1.1
     dev: true
+
+  /oh-my-live2d@0.15.2:
+    resolution: {integrity: sha512-0+K48pgUrJOzo6ey16KiUCdGX/pWWogRY2JeOf4JnlYo9Rnd1RCfbzMQ4sX85aAMfavNfKfx9XGw6jEl4er9Xw==}
+    dev: false
 
   /once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
