@@ -28,4 +28,3 @@ Support FileTree, Mermaid, Super/Sub script, TOC injection etc. capacity for you
 ### DX
 
 - [ ] rspress-plugin-graphql-playground
-

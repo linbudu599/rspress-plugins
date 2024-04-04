@@ -1,5 +1,6 @@
 import path from 'node:path';
 
+import { PresetConfigMutator } from 'rspress-plugin-devkit';
 import { remarkParseSuperSubScript } from './remark-plugins/parse-super-sub-script';
 
 import type { RspressPlugin } from '@rspress/shared';
@@ -10,9 +11,7 @@ export default function rspressPluginSupersub(): RspressPlugin {
   return {
     name: 'rspress-plugin-supersub',
     config(config) {
-      config.markdown ??= {};
-      config.markdown.mdxRs = false;
-      return config;
+      return new PresetConfigMutator(config).disableMdxRs().toConfig();
     },
     markdown: {
       remarkPlugins: [remarkParseSuperSubScript],

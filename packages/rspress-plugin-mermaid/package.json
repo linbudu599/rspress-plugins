@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@rspress/shared": "^1.16.2",
+    "mermaid": "^10.9.0",
     "rspress-plugin-devkit": "workspace:^"
   },
   "peerDependencies": {

@@ -1,0 +1,160 @@
+@rp-file-tree: rp-file-tree;
+
+.@{rp-file-tree} {
+  padding-left: 1.625rem;
+
+  &-expand {
+    &-container {
+      padding: 0;
+      margin: 0;
+      height: 0;
+      overflow: hidden;
+      transition: height 200ms ease;
+    }
+  }
+
+  &-indent {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 100%;
+    background-color: #333;
+    margin-left: -1px;
+
+    left: calc(-1.875rem * 1 + 0.75rem);
+  }
+
+  &-folder {
+    cursor: pointer;
+    line-height: 1;
+    user-select: none;
+
+    &-names {
+      display: flex;
+      height: 1.75rem;
+      align-items: center;
+      position: relative;
+
+      & > :global(.@{rp-file-tree}-indent) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 100%;
+        background-color: #333;
+        margin-left: -1px;
+      }
+    }
+
+    &-icon {
+      width: 1.5rem;
+      height: 100%;
+      margin-right: 0.5rem;
+
+      & > svg {
+        color: #111;
+      }
+    }
+
+    &-status {
+      position: absolute;
+      left: calc(-1.125rem);
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 0.875rem;
+      height: 0.875rem;
+      z-index: 10;
+      background-color: #000;
+
+      & > svg {
+        color: #111;
+      }
+    }
+
+    &-status,
+    &-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-name {
+      transition: opacity 100ms ease 0ms;
+      white-space: nowrap;
+      font-size: 0.875rem;
+      color: #111;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &-extra {
+      font-size: 0.75rem;
+      align-self: baseline;
+      padding-left: 4px;
+      color: #888;
+    }
+
+    &-content {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+    }
+  }
+
+  &-file {
+    cursor: pointer;
+    line-height: 1;
+    user-select: none;
+    // margin-left: calc(1.875rem * ${level});
+
+    &-names {
+      display: flex;
+      height: 1.75rem;
+      align-items: center;
+      position: relative;
+
+      & > :global(.@{rp-file-tree}-indent) {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        height: 100%;
+        background-color: #333;
+        margin-left: -1px;
+      }
+    }
+
+    &-icon {
+      width: 1.5rem;
+      height: 100%;
+      display: inline-flex;
+      align-items: center;
+      margin-right: 0.5rem;
+
+      & > svg {
+        color: #111;
+      }
+    }
+
+    &-name {
+      transition: opacity 100ms ease 0ms;
+      color: #111;
+      white-space: nowrap;
+      font-size: 0.875rem;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &-extra {
+      font-size: 0.75rem;
+      align-self: baseline;
+      padding-left: 4px;
+      color: #888;
+    }
+  }
+}

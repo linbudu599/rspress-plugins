@@ -13,6 +13,7 @@
     "@types/hast": "^3",
     "@types/mdast": "^3",
     "@types/node": "^20.12.2",
+    "clsx": "^2.1.0",
     "mdast-util-from-markdown": "^1.0.0",
     "mdast-util-to-markdown": "^1.5.0",
     "unified": "^10",
@@ -20,6 +21,5 @@
     "unist-util-visit-parents": "^6.0.1",
     "vfile": "^5.3.7",
     "vfile-reporter": "^7.0.5"
-  },
-  "devDependencies": {}
+  }
 }
