@@ -19,6 +19,7 @@
     "unified": "^10",
     "unist-util-visit": "^5.0.0",
     "unist-util-visit-parents": "^6.0.1",
+    "util-ts-types": "^1.0.0",
     "vfile": "^5.3.7",
     "vfile-reporter": "^7.0.5"
   }

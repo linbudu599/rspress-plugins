@@ -27,3 +27,5 @@ yarn-error.log*
 doc_build
 
 .TODO
+.env
+backup

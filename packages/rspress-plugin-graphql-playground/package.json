@@ -1,5 +1,5 @@
 {
-  "name": "rspress-plugin-transform-types",
+  "name": "rspress-plugin-graphql-playground",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
@@ -9,8 +9,10 @@
     "docs:dev": "rspress dev"
   },
   "dependencies": {
-    "@rspress/plugin-container-syntax": "^1.16.2",
+    "@geist-ui/core": "^2.3.8",
     "@rspress/shared": "^1.16.2",
+    "graphql-playground-react": "^1.7.28",
+    "react-redux": "^9.1.0",
     "rspress-plugin-devkit": "workspace:^"
   },
   "peerDependencies": {
