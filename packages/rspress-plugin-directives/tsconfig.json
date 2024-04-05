@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src", "src/components/Fallback/.tsx"],
+  "extends": "../../tsconfig.base.json"
+}
