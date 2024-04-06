@@ -1,5 +1,5 @@
 {
-  "name": "rspress-plugin-transform-types",
+  "name": "rspress-plugin-tsdoc",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {

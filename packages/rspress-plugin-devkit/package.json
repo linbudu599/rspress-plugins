@@ -16,6 +16,7 @@
     "clsx": "^2.1.0",
     "mdast-util-from-markdown": "^1.0.0",
     "mdast-util-to-markdown": "^1.5.0",
+    "remark-mdc": "1.2.0",
     "unified": "^10",
     "unist-util-visit": "^5.0.0",
     "unist-util-visit-parents": "^6.0.1",

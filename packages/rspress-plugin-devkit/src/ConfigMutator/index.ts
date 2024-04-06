@@ -9,7 +9,7 @@ type PluginConfigUtils = Parameters<NonNullable<RspressPlugin['config']>>[1];
 export class PresetConfigMutator {
   constructor(
     private readonly config: PluginConfigMutatorInput,
-    private readonly utils: PluginConfigUtils,
+    private readonly utils?: PluginConfigUtils,
   ) {}
 
   public toConfig(): PluginConfigMutatorInput {
@@ -17,8 +17,12 @@ export class PresetConfigMutator {
   }
 
   public addPlugins(...plugins: RspressPlugin[]) {
+    if (!this.utils) {
+      throw new Error('PluginConfigUtils not provided.');
+    }
+
     plugins.forEach((plugin) => {
-      this.utils.addPlugin(plugin);
+      this.utils!.addPlugin(plugin);
     });
 
     return this;

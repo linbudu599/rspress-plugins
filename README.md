@@ -37,7 +37,6 @@
 - [ ] rspress-plugin-gh-pages
 - [ ] rspress-plugin-google-analytics
 - [ ] rspress-plugin-vercel-analytics
-- [ ] rspress-plugin-open-graph
 
 ### DX
 

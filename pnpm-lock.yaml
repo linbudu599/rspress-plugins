@@ -191,6 +191,9 @@ importers:
       mdast-util-to-markdown:
         specifier: ^1.5.0
         version: 1.5.0
+      remark-mdc:
+        specifier: 1.2.0
+        version: 1.2.0
       unified:
         specifier: ^10
         version: 10.1.2
@@ -514,6 +517,37 @@ importers:
         version: 10.1.2
 
   packages/rspress-plugin-transform-types:
+    dependencies:
+      '@rspress/plugin-container-syntax':
+        specifier: ^1.16.2
+        version: 1.16.2
+      '@rspress/shared':
+        specifier: ^1.16.2
+        version: 1.16.2
+      rspress:
+        specifier: '*'
+        version: 1.16.2(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../rspress-plugin-devkit
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.2
+        version: 20.12.2
+      '@types/react':
+        specifier: ^18.2.73
+        version: 18.2.73
+      react:
+        specifier: ^18
+        version: 18.2.0
+      react-dom:
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
+      typescript:
+        specifier: ^5
+        version: 5.4.3
+
+  packages/rspress-plugin-tsdoc:
     dependencies:
       '@rspress/plugin-container-syntax':
         specifier: ^1.16.2

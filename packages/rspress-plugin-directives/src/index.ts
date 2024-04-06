@@ -1,8 +1,12 @@
 import path from 'node:path';
 
 import remarkMDC from 'remark-mdc';
-import { PresetConfigMutator } from 'rspress-plugin-devkit';
-import { remarkParseDirectives } from './remark-plugins/container-syntax';
+import {
+  PresetConfigMutator,
+  remarkParseDirective,
+  remarkTransformDirective,
+  type RemarkTransformDirectiveOptions,
+} from 'rspress-plugin-devkit';
 
 import type { RspressPlugin } from '@rspress/shared';
 
@@ -15,7 +19,21 @@ export default function rspressPluginSupersub(): RspressPlugin {
       return new PresetConfigMutator(config, utils).disableMdxRs().toConfig();
     },
     markdown: {
-      remarkPlugins: [remarkMDC, remarkParseDirectives],
+      remarkPlugins: [
+        remarkParseDirective,
+        [
+          remarkTransformDirective,
+          <RemarkTransformDirectiveOptions>{
+            directive: 'xxx',
+            transformer: {
+              type: 'globalComponent',
+              getComponentName: (meta) => {
+                return 'Fallback';
+              },
+            },
+          },
+        ],
+      ],
       globalComponents: [path.join(componentsPath, './Fallback.tsx')],
     },
   };

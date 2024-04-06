@@ -1,5 +1,15 @@
-export { CodeBlock2GlobalComponentPluginFactory } from './plugin-factory/CodeBlock2GlobalComponent';
-export { PresetConfigMutator } from './config-mutator/index';
+export { CodeBlock2GlobalComponentPluginFactory } from './PluginFactory/CodeBlock2GlobalComponent';
+export { PresetConfigMutator } from './ConfigMutator/index';
 
-export * from './re-exports';
 export type * from 'util-ts-types';
+export * from './Exports/Unist';
+export {
+  type DirectiveTypes,
+  type DirectiveTransformerTypes,
+  type RemarkTransformDirectiveOptions,
+  directiveComponentAttrsNormalizer,
+  remarkTransformDirective,
+  remarkParseDirective,
+} from './DirectivesTransformer';
+
+export { createTuple } from './Utils/createTuple';
