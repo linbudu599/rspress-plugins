@@ -14,7 +14,8 @@ export type RehypePluginFactory<PluginOptions = unknown> = Plugin<
 >;
 
 export { visit as unistVisit } from 'unist-util-visit';
-export { fromMarkdown } from 'mdast-util-from-markdown';
-export { toMarkdown } from 'mdast-util-to-markdown';
+export { fromMarkdown as MDASTFromMarkdown } from 'mdast-util-from-markdown';
+export { toMarkdown as MDASTToMarkdown } from 'mdast-util-to-markdown';
+export { toString as MDASTToString } from 'mdast-util-to-string';
 
 export type { Plugin, MDASTRoot, HASTRoot };

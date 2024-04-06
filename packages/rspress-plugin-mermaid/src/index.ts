@@ -1,6 +1,11 @@
 import path from 'node:path';
 
-import { CodeBlock2GlobalComponentPluginFactory } from 'rspress-plugin-devkit';
+import {
+  CodeBlock2GlobalComponentPluginFactory,
+  remarkParseDirective,
+  remarkTransformDirective,
+  type RemarkTransformDirectiveOptions,
+} from 'rspress-plugin-devkit';
 
 import type { RspressPlugin } from '@rspress/shared';
 

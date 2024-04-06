@@ -1,5 +1,6 @@
 import path from 'node:path';
 
+import merge from 'lodash-es/merge';
 import { visit } from 'unist-util-visit';
 
 import type { Plugin } from 'unified';
@@ -45,33 +46,43 @@ export class CodeBlock2GlobalComponentPluginFactory {
     };
   }
 
-  public instantiate(): RspressPlugin {
-    return {
-      name: this.options.name,
-      config(config) {
-        config.markdown ??= {};
-        config.markdown.mdxRs = false;
-        return config;
-      },
-      markdown: {
-        remarkPlugins: [this.createRemarkPlugin()],
-        globalComponents: this.options.transformers.map(
-          ({ componentPath }) => componentPath,
-        ),
-      },
-      builderConfig: {
-        tools: {
-          bundlerChain(chain) {
-            chain.module
-              .rule('Raw')
-              .resourceQuery(/raw/)
-              .type('asset/source')
-              .end();
+  private patchConfig: Omit<RspressPlugin, 'name'> = {};
 
-            chain.resolve.extensions.prepend('.md').prepend('.mdx');
+  public patch(input: Omit<RspressPlugin, 'name'>) {
+    merge(this.patchConfig, input);
+    return this;
+  }
+
+  public instantiate(): RspressPlugin {
+    return merge<RspressPlugin, Omit<RspressPlugin, 'name'>>(
+      {
+        name: this.options.name,
+        config(config) {
+          config.markdown ??= {};
+          config.markdown.mdxRs = false;
+          return config;
+        },
+        markdown: {
+          remarkPlugins: [this.createRemarkPlugin()],
+          globalComponents: this.options.transformers.map(
+            ({ componentPath }) => componentPath,
+          ),
+        },
+        builderConfig: {
+          tools: {
+            bundlerChain(chain) {
+              chain.module
+                .rule('Raw')
+                .resourceQuery(/raw/)
+                .type('asset/source')
+                .end();
+
+              chain.resolve.extensions.prepend('.md').prepend('.mdx');
+            },
           },
         },
       },
-    };
+      this.patchConfig,
+    );
   }
 }

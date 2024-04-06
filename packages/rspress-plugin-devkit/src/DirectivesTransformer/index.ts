@@ -1,4 +1,5 @@
 import type { Dictionary } from 'util-ts-types';
+import { toString } from 'mdast-util-to-string';
 import { unistVisit, type RemarkPluginFactory } from '../Exports/Unist';
 import { createTuple } from '../Utils/createTuple';
 import _remarkParseDirective from 'remark-mdc';
@@ -28,6 +29,7 @@ type Directive2ComponentTransformer = {
   type: 'globalComponent';
   getComponentName: (meta: ParsedDirectiveMeta) => string;
   getComponentProps?: (attributes: Dictionary<string>) => Dictionary<string>;
+  getComponentChildren?: (meta: ParsedDirectiveMeta, node: any) => string;
 };
 
 type Directive2AstNodeTransformer = {
@@ -65,6 +67,8 @@ export const remarkTransformDirective: RemarkPluginFactory<
         return;
       }
 
+      //
+
       const meta: ParsedDirectiveMeta = {
         type: node.type,
         name: node.name,
@@ -85,6 +89,19 @@ export const remarkTransformDirective: RemarkPluginFactory<
           type: 'mdxJsxFlowElement',
           name: transformer.getComponentName(meta),
           attributes: attrsNormalizer(meta.attributes),
+          children: transformer.getComponentChildren
+            ? [
+                {
+                  type: 'text',
+                  value: transformer.getComponentChildren(meta, node),
+                },
+              ]
+            : [
+                {
+                  type: 'text',
+                  value: toString(node),
+                },
+              ],
         });
       } else {
       }

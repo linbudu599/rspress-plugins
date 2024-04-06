@@ -30,13 +30,12 @@ const MermaidRenderer: React.FC<
 
       const { svg } = await mermaid.render(
         id.replace(/:/g, ''),
-        children as string
+        children as string,
       );
 
       setSvg(svg);
     } catch (error) {
       setRenderError(true);
-      console.error('Error while rendering mermaid in rspress', error);
     }
   }
 
