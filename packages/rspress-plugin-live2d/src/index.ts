@@ -1,18 +1,20 @@
 import path from 'node:path';
 
 import type { RspressPlugin } from '@rspress/shared';
-import { PresetConfigMutator } from 'rspress-plugin-devkit';
+import type { Live2DWidgetProps } from './components/Live2DWidget';
 
-export const componentsPath = path.join(__dirname, './components');
+export interface RspressPluginLive2dOptions extends Live2DWidgetProps {}
 
-export default function rspressPluginLive2d(): RspressPlugin {
+export default function rspressPluginLive2d(
+  props: RspressPluginLive2dOptions = {},
+): RspressPlugin {
   return {
     name: 'rspress-plugin-live2d',
-    config(config) {
-      return new PresetConfigMutator(config).toConfig();
-    },
     globalUIComponents: [
-      [path.join(componentsPath, 'Live2D', 'index.tsx'), {}],
+      [
+        path.join(__dirname, 'components', 'Live2DWidget.tsx'),
+        <Live2DWidgetProps>(props ?? {}),
+      ],
     ],
   };
 }
