@@ -1,7 +1,7 @@
 {
   "name": "rspress-plugin-back-to-top",
-  "version": "1.0.0",
-  "description": "ESBuild plugin for assets copy.",
+  "version": "0.1.0",
+  "description": "Rspress plugin that add a back to top button to your site.",
   "keywords": [
     "rspress",
     "plugin",
@@ -23,7 +23,8 @@
     "build": "tsc --declarationMap false",
     "dev": "tsc -w",
     "docs:build": "rspress build",
-    "docs:dev": "rspress dev"
+    "docs:dev": "rspress dev",
+    "prepublish": "npm run build"
   },
   "dependencies": {
     "@rspress/shared": "^1.16.2",

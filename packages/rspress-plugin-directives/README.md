@@ -1,5 +1,9 @@
-# rspress-plugin-directives
+# rspress-plugin-directives ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-directives)
 
-- 解析除了 RSPRESS 内置的容器指令以外的指令，也包括 Text Directive。
-- 能够简单地配置指令如何转换为组件
-- 支持新增指令注册？
+Rspress plugin to support custom directive transformations.
+
+Although rspress already supports directive syntax, it is limited to support for its built-in components such as `:::warning`, `:::tip`, etc. Beyond these built-in directives, you can't add your own directive-to-component conversion logic.
+
+This plugin allows you to add new custom directives, and conversions from custom directives to global components.
+
+Instead of importing components and using them directly inside an MDX file, with this plugin you can quickly refer to them via directives without importing them.

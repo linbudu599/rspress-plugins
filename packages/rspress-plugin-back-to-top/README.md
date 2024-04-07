@@ -1,4 +1,4 @@
-# rspress-plugin-back-to-top
+# rspress-plugin-back-to-top ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-back-to-top)
 
 Rspress plugin to add a back-to-top button when scrolling reaches a certain distance.
 

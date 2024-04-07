@@ -1,40 +1,44 @@
-import path from 'node:path';
-
-import remarkMDC from 'remark-mdc';
 import {
-  PresetConfigMutator,
+  ensureArray,
   remarkParseDirective,
   remarkTransformDirective,
-  type RemarkTransformDirectiveOptions,
+  PresetConfigMutator,
+  type MaybeArray,
+  type RemarkDirectiveTransformer,
 } from 'rspress-plugin-devkit';
 
 import type { RspressPlugin } from '@rspress/shared';
 
-export const componentsPath = path.join(__dirname, './components');
+type RspressPluginDirectivesOptions = MaybeArray<
+  RemarkDirectiveTransformer<{
+    componentPath: string;
+  }>
+>;
 
-export default function rspressPluginSupersub(): RspressPlugin {
+export default function rspressPluginDirectives(
+  options: RspressPluginDirectivesOptions = [],
+): RspressPlugin {
+  const transformers = ensureArray(options);
+
+  const mdGlobalComponents = <string[]>transformers
+    .map((t) => t.transformer)
+    .flat()
+    .map((transformer) =>
+      transformer.type === 'globalComponent' ? transformer.componentPath : null,
+    )
+    .filter(Boolean);
+
   return {
-    name: 'rspress-plugin-supersub',
-    config(config, utils) {
-      return new PresetConfigMutator(config, utils).disableMdxRs().toConfig();
+    name: 'rspress-plugin-directives',
+    config(config) {
+      return new PresetConfigMutator(config).disableMdxRs().toConfig();
     },
     markdown: {
       remarkPlugins: [
         remarkParseDirective,
-        [
-          remarkTransformDirective,
-          <RemarkTransformDirectiveOptions>{
-            directive: 'xxx',
-            transformer: {
-              type: 'globalComponent',
-              getComponentName: (meta) => {
-                return 'Fallback';
-              },
-            },
-          },
-        ],
+        [remarkTransformDirective, options],
       ],
-      globalComponents: [path.join(componentsPath, './Fallback.tsx')],
+      globalComponents: mdGlobalComponents,
     },
   };
 }

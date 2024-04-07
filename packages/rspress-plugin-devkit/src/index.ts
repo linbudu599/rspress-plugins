@@ -6,6 +6,7 @@ export * from './Exports/Unist';
 export {
   type DirectiveTypes,
   type DirectiveTransformerTypes,
+  type RemarkDirectiveTransformer,
   type RemarkTransformDirectiveOptions,
   directiveComponentAttrsNormalizer,
   remarkTransformDirective,
@@ -13,3 +14,4 @@ export {
 } from './DirectivesTransformer';
 
 export { createTuple } from './Utils/createTuple';
+export { ensureArray } from './Utils/ensureArray';
