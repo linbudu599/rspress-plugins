@@ -35,10 +35,3 @@
 ### Site
 
 - [ ] rspress-plugin-gh-pages
-- [ ] rspress-plugin-google-analytics
-- [ ] rspress-plugin-vercel-analytics
-
-### DX
-
-- [ ] rspress-plugin-react-demo
-- [ ] rspress-plugin-graphql-playground
