@@ -16,7 +16,7 @@
 
 ### References
 
-- [ ] rspress-plugin-props-table
+- [ ] rspress-plugin-tsdoc
 
 ### Themes
 
@@ -24,8 +24,8 @@
 - [ ] rspress-plugin-back-to-top
 - [ ] rspress-plugin-comment
 - [ ] rspress-plugin-live2d
-- [ ] rspress-plugin-search-pages
-- [ ] rspress-plugin-directive-components
+- [ ] rspress-plugin-search-page
+- [ ] rspress-plugin-directives
 
 ### CMS
 
