@@ -1,7 +1,24 @@
 {
   "name": "rspress-plugin-back-to-top",
   "version": "1.0.0",
+  "description": "ESBuild plugin for assets copy.",
+  "keywords": [
+    "rspress",
+    "plugin",
+    "back-to-top"
+  ],
+  "homepage": "https://github.com/linbudu599/rspress-plugins/tree/main/packages/rspress-plugin-back-to-top#readme",
+  "bugs": {
+    "url": "https://github.com/linbudu599/rspress-plugins/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linbudu599/rspress-plugins.git"
+  },
+  "license": "MIT",
+  "author": "Linbudu <linbudu599@gmail.com> (https://github.com/linbudu599)",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc --declarationMap false",
     "dev": "tsc -w",
@@ -10,24 +27,18 @@
   },
   "dependencies": {
     "@rspress/shared": "^1.16.2",
-    "clsx": "^2.1.0",
-    "radash": "^12.1.0",
-    "rspress": "^1.16.2",
     "rspress-plugin-devkit": "workspace:^",
-    "unist-util-visit": "^5.0.0"
+    "throttle-debounce": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.2",
+    "@types/react": "^18.2.73",
+    "@types/throttle-debounce": "^5.0.2",
+    "react": "^18",
+    "react-dom": "^18",
+    "typescript": "^5"
   },
   "peerDependencies": {
     "rspress": "*"
-  },
-  "devDependencies": {
-    "@types/mdast": "^3",
-    "@types/node": "^20.12.2",
-    "@types/react": "^18.2.73",
-    "mdast-util-mdxjs-esm": "^2.0.1",
-    "react": "^18",
-    "react-dom": "^18",
-    "typescript": "^5",
-    "unified": "^10",
-    "unist-util-visit": "^4"
   }
 }

@@ -5,5 +5,5 @@ import back2Top from './src';
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
   title: 'Rspress x Back2Top Example',
-  plugins: [back2Top()],
+  plugins: [back2Top({})],
 });
