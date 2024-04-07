@@ -1,7 +1,36 @@
 import { unistVisit, type RemarkPluginFactory } from 'rspress-plugin-devkit';
 
-interface RemarkParseSuperSubScriptOptions {
+export interface RemarkParseSuperSubScriptOptions {
+  /**
+   * The syntax for superscript.
+   *
+   * @example
+   *
+   * ```markdown
+   * x^2^
+   * ```
+   *
+   * Will be converted to:
+   *
+   * `x<sup>2</sup>`
+   *
+   * @default '^'
+   */
   superSyntax?: string;
+  /**
+   * The syntax for subscript.
+   *
+   * @example
+   *
+   * ```markdown
+   * H_2_O
+   * ```
+   * Will be converted to:
+   *
+   * `H<sub>2</sub>O`
+   *
+   * @default '_'
+   */
   subSyntax?: string;
 }
 

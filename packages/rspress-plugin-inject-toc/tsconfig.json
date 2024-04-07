@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "rspress-plugin-back-to-top": ["src/index.ts"]
+    }
+  },
+  "include": ["src", "../../s.ts"],
+  "extends": "../../tsconfig.base.json"
+}

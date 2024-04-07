@@ -1,14 +1,13 @@
 {
-  "name": "rspress-plugin-supersub",
+  "name": "rspress-plugin-back-to-top",
   "version": "0.1.0",
-  "description": "Rspress plugin that add support for superscript and subscript",
+  "description": "Rspress plugin that add a back to top button to your site.",
   "keywords": [
     "rspress",
     "plugin",
-    "superscript",
-    "subscript"
+    "back-to-top"
   ],
-  "homepage": "https://github.com/linbudu599/rspress-plugins/tree/main/packages/rspress-plugin-supersub#readme",
+  "homepage": "https://github.com/linbudu599/rspress-plugins/tree/main/packages/rspress-plugin-back-to-top#readme",
   "bugs": {
     "url": "https://github.com/linbudu599/rspress-plugins/issues"
   },

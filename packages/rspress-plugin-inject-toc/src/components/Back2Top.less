@@ -1,0 +1,39 @@
+@rp-back-to-top: rp-back-to-top;
+
+.@{rp-back-to-top} {
+  position: fixed;
+  bottom: 5rem;
+  right: 4rem;
+  height: 3rem;
+  width: 3rem;
+  // border: 1.5px solid #000;
+  // border-radius: 12px;
+  display: flex;
+
+  z-index: calc(infinity);
+
+  cursor: pointer;
+
+  transition: opacity 0.3s ease-in-out;
+
+  &[data-visible='false'] {
+    opacity: 0;
+  }
+
+  &[data-visible='true'] {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  svg {
+    width: 3.5rem;
+    height: 3rem;
+  }
+
+  @media print {
+    display: none;
+  }
+}
