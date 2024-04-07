@@ -1,26 +1,41 @@
 {
-  "name": "rspress-plugin-mermaid",
-  "version": "1.0.0",
+  "name": "rspress-plugin-file-tree",
+  "version": "0.1.0",
+  "description": "Rspress plugin for file tree component.",
+  "keywords": [
+    "rspress",
+    "plugin",
+    "file-tree",
+    "tree"
+  ],
+  "homepage": "https://github.com/linbudu599/rspress-plugins/tree/main/packages/rspress-plugin-file-tree#readme",
+  "bugs": {
+    "url": "https://github.com/linbudu599/rspress-plugins/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linbudu599/rspress-plugins.git"
+  },
+  "license": "MIT",
+  "author": "Linbudu <linbudu599@gmail.com> (https://github.com/linbudu599)",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc --declarationMap false",
     "dev": "tsc -w",
     "docs:build": "rspress build",
-    "docs:dev": "rspress dev"
+    "docs:dev": "rspress dev",
+    "prepublish": "npm run build"
   },
   "dependencies": {
-    "@geist-ui/core": "^2.3.8",
     "@rspress/shared": "^1.16.2",
     "rspress-plugin-devkit": "workspace:^"
   },
-  "peerDependencies": {
-    "rspress": "*"
-  },
   "devDependencies": {
     "@types/node": "^20.12.2",
-    "@types/react": "^18.2.73",
-    "react": "^18",
-    "react-dom": "^18",
     "typescript": "^5"
+  },
+  "peerDependencies": {
+    "rspress": "*"
   }
 }

@@ -7,6 +7,7 @@ import type { Plugin } from 'unified';
 import type { Root, Content } from 'mdast';
 
 import type { RspressPlugin } from '@rspress/shared';
+import { normalizeMDXComponentAttrs } from '../Utils/normalizeMDXComponentAttrs';
 
 interface InstantiateOptions {
   name: string;
@@ -37,7 +38,9 @@ export class CodeBlock2GlobalComponentPluginFactory {
                     value: code.value,
                   },
                 ],
-                attributes: propsProvider?.(code.value) ?? {},
+                attributes: normalizeMDXComponentAttrs(
+                  propsProvider?.(code.value) ?? {},
+                ),
               });
             }
           },

@@ -3,43 +3,7 @@ import path from 'node:path';
 import { CodeBlock2GlobalComponentPluginFactory } from 'rspress-plugin-devkit';
 
 import type { RspressPlugin } from '@rspress/shared';
-
-export const componentsPath = path.join(__dirname, './components');
-
-const files = [
-  {
-    type: 'directory',
-    name: 'bin',
-    files: [
-      {
-        type: 'file',
-        name: 'cs.js',
-      },
-    ],
-  },
-  {
-    type: 'directory',
-    name: 'docs',
-    files: [
-      {
-        type: 'file',
-        name: 'controllers.md',
-      },
-      {
-        type: 'file',
-        name: 'es6.md',
-      },
-      {
-        type: 'file',
-        name: 'production.md',
-      },
-      {
-        type: 'file',
-        name: 'views.md',
-      },
-    ],
-  },
-] as any;
+import { parseInput } from './parser';
 
 export default function rspressPluginMermaid(): RspressPlugin {
   return new CodeBlock2GlobalComponentPluginFactory({
@@ -47,15 +11,23 @@ export default function rspressPluginMermaid(): RspressPlugin {
     transformers: [
       {
         lang: 'tree',
-        childrenProvider: (text) => {
+        childrenProvider() {
           return [
             {
               type: 'text',
-              value: JSON.stringify(files),
+              value: '',
             },
           ];
         },
-        componentPath: path.join(componentsPath, 'FileTreeRender.tsx'),
+        propsProvider(code) {
+          return {
+            value: JSON.stringify(parseInput(code)),
+          };
+        },
+        componentPath: path.join(
+          __dirname,
+          './components/Tree/FileTreeRender.tsx',
+        ),
       },
     ],
   }).instantiate();

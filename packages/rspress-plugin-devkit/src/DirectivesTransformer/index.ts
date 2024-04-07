@@ -5,6 +5,7 @@ import { createTuple } from '../Utils/createTuple';
 import _remarkParseDirective from 'remark-mdc';
 import type { Content } from 'mdast';
 import { ensureArray } from '../Utils/ensureArray';
+import { normalizeMDXComponentAttrs } from '../Utils/normalizeMDXComponentAttrs';
 
 /**
  * Directives can be transformed to:
@@ -51,20 +52,6 @@ export type RemarkDirectiveTransformer<
 export type RemarkTransformDirectiveOptions =
   MaybeArray<RemarkDirectiveTransformer>;
 
-export const directiveComponentAttrsNormalizer = (
-  attributes: Dictionary<string>,
-) => {
-  const parsedAttrs = Object.entries(attributes)?.map(([key, val]) => {
-    return {
-      type: 'mdxJsxAttribute',
-      name: key,
-      value: val,
-    };
-  });
-
-  return parsedAttrs;
-};
-
 export const remarkTransformDirective: RemarkPluginFactory<
   RemarkTransformDirectiveOptions
 > = (options = []) => {
@@ -97,7 +84,7 @@ export const remarkTransformDirective: RemarkPluginFactory<
           parent!.children.splice(index, 1, ...content);
         } else if (transformerType === 'globalComponent') {
           const attrsNormalizer =
-            transformer?.getComponentProps ?? directiveComponentAttrsNormalizer;
+            transformer?.getComponentProps ?? normalizeMDXComponentAttrs;
 
           parent!.children.splice(index, 1, {
             type: 'mdxJsxFlowElement',
