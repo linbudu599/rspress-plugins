@@ -27,14 +27,14 @@
     "prepublish": "npm run build"
   },
   "dependencies": {
-    "@rspress/shared": "^1.16.2",
+    "@rspress/shared": "^1.17.1",
     "oh-my-live2d": "^0.15.2",
     "rspress-plugin-devkit": "workspace:^"
   },
   "devDependencies": {
-    "@types/node": "^20.12.2",
-    "@types/react": "^18.2.73",
-    "typescript": "^5"
+    "@types/node": "^20.12.5",
+    "@types/react": "^18.2.74",
+    "typescript": "^5.4.4"
   },
   "peerDependencies": {
     "rspress": "*"
