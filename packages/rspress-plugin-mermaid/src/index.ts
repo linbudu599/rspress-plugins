@@ -1,6 +1,9 @@
 import path from 'node:path';
 
-import { CodeBlock2GlobalComponentPluginFactory } from 'rspress-plugin-devkit';
+import {
+  PresetConfigMutator,
+  RemarkCodeBlockToGlobalComponentPluginFactory,
+} from 'rspress-plugin-devkit';
 
 import type { RspressPlugin } from '@rspress/shared';
 import type { MermaidConfig } from 'mermaid';
@@ -15,9 +18,8 @@ export default function rspressPluginMermaid(
 ): RspressPlugin {
   const { mermaidConfig = {} } = options;
 
-  return new CodeBlock2GlobalComponentPluginFactory({
-    name: 'rspress-plugin-mermaid',
-    transformers: [
+  const remarkMermaid = new RemarkCodeBlockToGlobalComponentPluginFactory({
+    components: [
       {
         lang: 'mermaid',
         componentPath: path.join(__dirname, './components/MermaidRender.tsx'),
@@ -32,5 +34,17 @@ export default function rspressPluginMermaid(
         },
       },
     ],
-  }).instantiate();
+  });
+
+  return {
+    name: 'rspress-plugin-mermaid',
+    config(config) {
+      return new PresetConfigMutator(config).disableMdxRs().toConfig();
+    },
+    markdown: {
+      remarkPlugins: [remarkMermaid.remarkPlugin],
+      globalComponents: remarkMermaid.mdxComponents,
+    },
+    builderConfig: remarkMermaid.builderConfig,
+  };
 }

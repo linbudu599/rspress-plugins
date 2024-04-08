@@ -1,4 +1,5 @@
-export { CodeBlock2GlobalComponentPluginFactory } from './PluginFactory/CodeBlock2GlobalComponent';
+export { RemarkCodeBlockToGlobalComponentPluginFactory } from './RemarkPluginFactory/CodeBlock2GlobalComponent';
+export { RemarkInsertComponentPluginFactory } from './RemarkPluginFactory/InsertComponent';
 export { PresetConfigMutator } from './ConfigMutator/index';
 
 export type * from 'util-ts-types';
