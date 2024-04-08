@@ -1,14 +1,15 @@
 import React, { useEffect, useId, useState } from 'react';
 
-import mermaid from 'mermaid';
+import mermaid, { type MermaidConfig } from 'mermaid';
 
-import type { MermaidConfig } from 'mermaid';
+export interface MermaidRendererProps {
+  code: string;
+  config?: MermaidConfig;
+}
 
-interface MermaidRendererProps {}
+const MermaidRenderer: React.FC<MermaidRendererProps> = (props) => {
+  const { code, config = {} } = props;
 
-const MermaidRenderer: React.FC<
-  React.PropsWithChildren<MermaidRendererProps>
-> = ({ children = '' }) => {
   const id = useId();
 
   const [svg, setSvg] = useState('');
@@ -23,6 +24,7 @@ const MermaidRenderer: React.FC<
       securityLevel: 'loose',
       startOnLoad: false,
       theme: hasDarkClass ? 'dark' : 'default',
+      ...config,
     };
 
     try {
@@ -30,7 +32,7 @@ const MermaidRenderer: React.FC<
 
       const { svg } = await mermaid.render(
         id.replace(/:/g, ''),
-        children as string,
+        code as string,
       );
 
       setSvg(svg);
@@ -41,7 +43,7 @@ const MermaidRenderer: React.FC<
 
   useEffect(() => {
     renderMermaid2SVG();
-  }, [children]);
+  }, [code]);
 
   return (
     <>

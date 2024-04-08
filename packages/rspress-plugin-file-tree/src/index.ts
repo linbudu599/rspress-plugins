@@ -12,12 +12,7 @@ export default function rspressPluginMermaid(): RspressPlugin {
       {
         lang: 'tree',
         childrenProvider() {
-          return [
-            {
-              type: 'text',
-              value: '',
-            },
-          ];
+          return [];
         },
         propsProvider(code) {
           return {
