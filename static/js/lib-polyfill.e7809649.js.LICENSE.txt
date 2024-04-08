@@ -12,6 +12,8 @@
 
 /*! ../internals/is-object */
 
+/*! ./arrayWithoutHoles.js */
+
 /*! ../internals/create-property-descriptor */
 
 /*! ../internals/to-property-key */
@@ -34,6 +36,8 @@
 
 /*! ../internals/descriptors */
 
+/*! ./toPropertyKey.js */
+
 /*! ../internals/hidden-keys */
 
 /*! ../internals/to-integer-or-infinity */
@@ -47,6 +51,8 @@
 /*! ../internals/internal-state */
 
 /*! ../internals/symbol-constructor-detection */
+
+/*! ./arrayLikeToArray.js */
 
 /*! ../internals/call-with-safe-iteration-closing */
 
@@ -80,9 +86,9 @@
 
 /*! ../internals/export */
 
-/*! ../internals/function-call */
+/*! ./toPrimitive.js */
 
-/*! ./nonIterableSpread.js */
+/*! ../internals/function-call */
 
 /*! ../internals/well-known-symbol */
 
@@ -157,6 +163,8 @@
 /*! ../internals/is-array-iterator-method */
 
 /*! ../internals/uid */
+
+/*! ./iterableToArray.js */
 
 /*! ../internals/fails */
 
@@ -240,17 +248,15 @@
 
 /*! ../internals/create-non-enumerable-property */
 
-/*! ./unsupportedIterableToArray.js */
-
 /*! ../internals/is-pure */
+
+/*! ./typeof.js */
 
 /*! ../internals/function-uncurry-this */
 
 /*! ../internals/object-get-own-property-descriptor */
 
 /*! ../internals/create-non-enumerable-property */
-
-/*! ./arrayWithoutHoles.js */
 
 /*! ../internals/to-string */
 
@@ -278,9 +284,11 @@
 
 /*! ../internals/fails */
 
-/*! ./toPropertyKey.js */
+/*! ./arrayLikeToArray.js */
 
 /*! ../internals/inspect-source */
+
+/*! ./nonIterableSpread.js */
 
 /*! ../internals/object-define-properties */
 
@@ -348,6 +356,8 @@
 
 /*! ../internals/length-of-array-like */
 
+/*! ./objectWithoutPropertiesLoose.js */
+
 /*! ../internals/iterator-create-proxy */
 
 /*! ../internals/shared */
@@ -401,6 +411,8 @@
 /*! ../internals/object-define-property */
 
 /*! ../internals/function-uncurry-this */
+
+/*! ./unsupportedIterableToArray.js */
 
 /*! ../internals/define-built-in */
 
@@ -478,21 +490,15 @@
 
 /*! ../internals/object-get-prototype-of */
 
-/*! ./typeof.js */
-
 /*! ../internals/global */
 
 /*! ../internals/object-get-own-property-descriptor */
-
-/*! ./arrayLikeToArray.js */
 
 /*! ../internals/object-create */
 
 /*! ../internals/get-iterator-direct */
 
 /*! ../internals/is-symbol */
-
-/*! ./arrayLikeToArray.js */
 
 /*! ../internals/global */
 
@@ -509,8 +515,6 @@
 /*! ../internals/function-call */
 
 /*! ../internals/shared-key */
-
-/*! ./toPrimitive.js */
 
 /*! ../internals/fails */
 
@@ -578,8 +582,6 @@
 
 /*! ../internals/global */
 
-/*! ./objectWithoutPropertiesLoose.js */
-
 /*! ../internals/is-pure */
 
 /*! ../internals/is-object */
@@ -593,8 +595,6 @@
 /*! ../internals/engine-v8-version */
 
 /*! ../internals/iterate */
-
-/*! ./iterableToArray.js */
 
 /*! ../internals/an-object */
 
