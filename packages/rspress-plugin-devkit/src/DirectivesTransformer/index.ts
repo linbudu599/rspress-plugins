@@ -1,11 +1,14 @@
 import type { Dictionary, MaybeArray } from 'util-ts-types';
 import { toString } from 'mdast-util-to-string';
-import { unistVisit, type RemarkPluginFactory } from '../Exports/Unist';
-import { createTuple } from '../Utils/createTuple';
 import _remarkParseDirective from 'remark-mdc';
-import type { Content } from 'mdast';
+
+import { unistVisit, type RemarkPluginFactory } from '../Exports/Unist';
+
+import { createTuple } from '../Utils/createTuple';
 import { ensureArray } from '../Utils/ensureArray';
 import { normalizeMDXComponentAttrs } from '../Utils/normalizeMDXComponentAttrs';
+
+import type { Content } from 'mdast';
 
 /**
  * Directives can be transformed to:

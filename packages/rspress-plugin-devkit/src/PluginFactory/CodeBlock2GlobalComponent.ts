@@ -3,11 +3,17 @@ import path from 'node:path';
 import merge from 'lodash-es/merge';
 import { visit } from 'unist-util-visit';
 
+import { normalizeMDXComponentAttrs } from '../Utils/normalizeMDXComponentAttrs';
+import { PresetConfigMutator } from '../ConfigMutator';
+
 import type { Plugin } from 'unified';
 import type { Root, Content } from 'mdast';
-
 import type { RspressPlugin } from '@rspress/shared';
-import { normalizeMDXComponentAttrs } from '../Utils/normalizeMDXComponentAttrs';
+import type {
+  MdxJsxAttribute,
+  MdxJsxExpressionAttribute,
+} from 'mdast-util-mdx-jsx';
+import { MdxAttrNodeFactory } from '../NodeFactory/MdxAttrNodeFactory';
 
 interface InstantiateOptions {
   name: string;
@@ -41,6 +47,16 @@ export class CodeBlock2GlobalComponentPluginFactory {
                 attributes: normalizeMDXComponentAttrs(
                   propsProvider?.(code.value) ?? {},
                 ),
+                // attributes: [
+                //   MdxAttrNodeFactory.createMdxJsxExpressionAttributeNode(
+                //     'config',
+                //     {
+                //       configValue: {
+                //         value: code.value,
+                //       },
+                //     },
+                //   ),
+                // ],
               });
             }
           },
@@ -61,9 +77,7 @@ export class CodeBlock2GlobalComponentPluginFactory {
       {
         name: this.options.name,
         config(config) {
-          config.markdown ??= {};
-          config.markdown.mdxRs = false;
-          return config;
+          return new PresetConfigMutator(config).disableMdxRs().toConfig();
         },
         markdown: {
           remarkPlugins: [this.createRemarkPlugin()],
