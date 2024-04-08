@@ -4,7 +4,7 @@ import type { MdxJsxFlowElement } from 'mdast-util-mdx-jsx';
 import path from 'path';
 import { normalizeMDXComponentAttrs } from '../Utils/normalizeMDXComponentAttrs';
 
-export interface ComponentRegistration<ComponentMetaProvider = void> {
+export interface ComponentRegistration<ComponentMetaProvider = any> {
   componentPath: string;
   propsProvider?: (input: ComponentMetaProvider) => Dictionary<unknown>;
   childrenProvider?: (input: ComponentMetaProvider) => Content[];
@@ -19,9 +19,9 @@ export class MdxJsxElementFactory {
       type: 'mdxJsxFlowElement',
       name: path.basename(component.componentPath, '.tsx'),
       // @ts-expect-error
-      children: component.childrenProvider?.(meta) ?? [],
+      children: meta ? component.childrenProvider?.(meta) ?? [] : [],
       attributes: normalizeMDXComponentAttrs(
-        component.propsProvider?.(meta) ?? {},
+        meta ? component.propsProvider?.(meta) ?? {} : {},
       ),
     };
   }

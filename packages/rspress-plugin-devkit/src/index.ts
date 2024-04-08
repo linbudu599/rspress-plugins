@@ -17,4 +17,5 @@ export { MdxAttrNodeFactory } from './NodeFactory/MdxAttrNodeFactory';
 
 export { createTuple } from './Utils/createTuple';
 export { ensureArray } from './Utils/ensureArray';
+export { uniqArray } from './Utils/uniqArray';
 export * from './Utils/is';

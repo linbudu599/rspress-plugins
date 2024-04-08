@@ -16,6 +16,10 @@ export default function rspressPluginReadingTime(): RspressPlugin {
         position: 'pre',
         componentPath: path.join(componentsPath, './ReadingTime.tsx'),
       },
+      {
+        position: 'post',
+        componentPath: path.join(componentsPath, './ReadingTime.tsx'),
+      },
     ],
   });
 

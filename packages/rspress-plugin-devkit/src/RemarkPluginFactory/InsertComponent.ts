@@ -5,7 +5,7 @@ import { ComponentRegistration, RemarkPluginFactoryBase } from './FactoryBase';
 import type { Plugin } from 'unified';
 import type { Root } from 'mdast';
 
-interface ComponentInsertDescriptor extends ComponentRegistration {
+interface ComponentInsertDescriptor extends ComponentRegistration<void> {
   position: 'pre' | 'post';
 }
 
@@ -21,12 +21,28 @@ export class RemarkInsertComponentPluginFactory extends RemarkPluginFactoryBase 
   public get remarkPlugin(): Plugin<[unknown], Root> {
     return () => (tree, vfile) => {
       unistVisit(tree, (node, index = 0, parent) => {
+        if (!this.options?.components?.length) return;
+
+        const beforeInsertCount = this.options.components.filter(
+          ({ position }) => position === 'pre',
+        ).length;
+
+        if (node.type !== 'root') return;
+
+        const insertIndexAtPre =
+          // @ts-expect-error
+          node.children.findLastIndex((node) => node.type === 'mdxjsEsm') + 1;
+
+        const insertIndexAtPost = node.children.length + beforeInsertCount;
+
         this.options.components.forEach(
           ({ position, componentPath, propsProvider, childrenProvider }) => {
             const insertIndex =
-              position === 'pre' ? tree.children.unshift : tree.children.push;
+              position === 'pre' ? insertIndexAtPre : insertIndexAtPost;
 
-            insertIndex(
+            node.children.splice(
+              insertIndex,
+              0,
               // @ts-expect-error
               MdxJsxElementFactory.createMdxJsxFlowElementNode(null, {
                 componentPath,
