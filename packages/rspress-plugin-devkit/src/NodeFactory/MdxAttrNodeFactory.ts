@@ -1,4 +1,4 @@
-import { Dictionary } from 'lodash';
+import { Dictionary, isObject } from 'lodash';
 import type {
   MdxJsxAttribute,
   MdxJsxExpressionAttribute,
@@ -6,7 +6,17 @@ import type {
 import { ESTreeNodeFactory } from './ESTreeNodeFactory';
 
 export class MdxAttrNodeFactory {
-  public static createMdxJsxAttributeNode(
+  public static createMdxJsxAttributeNodes(attributes: Dictionary<any>) {
+    const parsedAttrs = Object.entries(attributes)?.map(([key, val]) => {
+      return isObject(val) || Array.isArray(val)
+        ? MdxAttrNodeFactory.createMdxJsxExpressionAttributeNode(key, val)
+        : MdxAttrNodeFactory.createMdxJsxLiteralAttributeNode(key, val);
+    });
+
+    return parsedAttrs;
+  }
+
+  public static createMdxJsxLiteralAttributeNode(
     name: string,
     value: string | number | boolean,
   ): MdxJsxAttribute {
@@ -28,7 +38,7 @@ export class MdxAttrNodeFactory {
       })}`,
       data: {
         estree: ESTreeNodeFactory.createESTreeProgramNode([
-          ESTreeNodeFactory.createSpreadExpressionNode({
+          ESTreeNodeFactory.createSpreadObjectExpressionNode({
             [name]: value,
           }),
         ]),

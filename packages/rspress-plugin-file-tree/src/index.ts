@@ -5,8 +5,9 @@ import {
   RemarkCodeBlockToGlobalComponentPluginFactory,
 } from 'rspress-plugin-devkit';
 
-import type { RspressPlugin } from '@rspress/shared';
 import { parseInput } from './parser';
+
+import type { RspressPlugin } from '@rspress/shared';
 
 interface RspressPluginFileTreeOptions {}
 
@@ -21,12 +22,9 @@ export default function rspressPluginFileTree(
           __dirname,
           './components/Tree/FileTreeRender.tsx',
         ),
-        childrenProvider() {
-          return [];
-        },
         propsProvider(code) {
           return {
-            // tree: parseInput(code),
+            tree: parseInput(code),
           };
         },
       },

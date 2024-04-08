@@ -19,7 +19,7 @@ export type TreeFile = {
 };
 
 interface Props {
-  value?: string;
+  tree?: TreeFile[];
   initialExpand?: boolean;
   onClick?: (path: string) => void;
   className?: string;
@@ -66,15 +66,14 @@ const Tree: React.FC<React.PropsWithChildren<TreeProps>> = ({
   children,
   onClick,
   initialExpand,
-  value,
+  tree,
   className,
   ...props
 }: React.PropsWithChildren<TreeProps> & typeof defaultProps) => {
-  if (!value) return null;
+  console.log('04-08 props: ', props);
+  if (!tree) return null;
 
-  const parsedValue = JSON.parse(value) as Array<TreeFile>;
-
-  const isImperative = Boolean(value && value.length > 0);
+  const isImperative = Boolean(tree.length > 0);
   const onFileClick = (path: string) => {
     onClick && onClick(path);
   };
@@ -89,7 +88,7 @@ const Tree: React.FC<React.PropsWithChildren<TreeProps>> = ({
   );
 
   const customChildren = isImperative
-    ? makeChildren(parsedValue)
+    ? makeChildren(tree)
     : sortChildren(children, TreeFolder);
 
   return (
