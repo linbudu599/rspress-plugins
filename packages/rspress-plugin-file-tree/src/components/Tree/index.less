@@ -1,15 +1,34 @@
 @rp-file-tree: ~'rp-file-tree';
 
+@rp-tree-color-light: #000;
+@rp-tree-color-dark: #fafafa;
+
+@rp-tree-status-bg-light: #fff;
+@rp-tree-status-bg-dark: #000;
+
+@rp-tree-indent-bg-light: #eaeaea;
+@rp-tree-indent-bg-dark: #333;
+
 .@{rp-file-tree} {
+  &[data-dark='true'] {
+    --rp-tree-color: @rp-tree-color-dark;
+    --rp-tree-status-bg: @rp-tree-status-bg-dark;
+    --rp-tree-indent-bg: @rp-tree-indent-bg-dark;
+  }
+
+  &[data-dark='false'] {
+    --rp-tree-color: @rp-tree-color-light;
+    --rp-tree-status-bg: @rp-tree-status-bg-light;
+    --rp-tree-indent-bg: @rp-tree-indent-bg-light;
+  }
+
   padding-left: 1.625rem;
 
   &-expand {
     &-container {
       padding: 0;
       margin: 0;
-      height: 0;
       overflow: hidden;
-      transition: height 200ms ease;
     }
   }
 
@@ -19,10 +38,8 @@
     transform: translateY(-50%);
     width: 1px;
     height: 100%;
-    background-color: #333;
+    background-color: var(--rp-tree-indent-bg);
     margin-left: -1px;
-
-    left: calc(-1.875rem * 1 + 0.75rem);
   }
 
   &-folder {
@@ -42,18 +59,16 @@
         transform: translateY(-50%);
         width: 1px;
         height: 100%;
-        background-color: #333;
+        background-color: var(--rp-tree-indent-bg);
         margin-left: -1px;
       }
     }
 
     &-icon {
-      width: 1.5rem;
-      height: 100%;
-      margin-right: 0.5rem;
+      margin-right: 0.3rem;
 
       & > svg {
-        color: #111;
+        color: var(--rp-tree-color);
       }
     }
 
@@ -65,10 +80,10 @@
       width: 0.875rem;
       height: 0.875rem;
       z-index: 10;
-      background-color: #000;
+      background-color: var(--rp-tree-status-bg);
 
       & > svg {
-        color: #111;
+        color: var(--rp-tree-color);
       }
     }
 
@@ -83,7 +98,7 @@
       transition: opacity 100ms ease 0ms;
       white-space: nowrap;
       font-size: 0.875rem;
-      color: #111;
+      color: var(--rp-tree-color);
 
       &:hover {
         opacity: 0.7;
@@ -108,7 +123,6 @@
     cursor: pointer;
     line-height: 1;
     user-select: none;
-    // margin-left: calc(1.875rem * ${level});
 
     &-names {
       display: flex;
@@ -122,26 +136,25 @@
         transform: translateY(-50%);
         width: 1px;
         height: 100%;
-        background-color: #333;
+        background-color: var(--rp-tree-indent-bg);
+
         margin-left: -1px;
       }
     }
 
     &-icon {
-      width: 1.5rem;
-      height: 100%;
       display: inline-flex;
       align-items: center;
-      margin-right: 0.5rem;
+      margin-right: 0.3rem;
 
       & > svg {
-        color: #111;
+        color: var(--rp-tree-color);
       }
     }
 
     &-name {
       transition: opacity 100ms ease 0ms;
-      color: #111;
+      color: var(--rp-tree-color);
       white-space: nowrap;
       font-size: 0.875rem;
 

@@ -14,6 +14,9 @@ const TreeIndents: React.FC<Props> = ({ count }) => {
         <span
           className={buildClassName('indent')}
           key={`indent-${index}`}
+          style={{
+            left: `calc(-1.875rem * ${index + 1} + 0.75rem)`,
+          }}
         ></span>
       ))}
     </>

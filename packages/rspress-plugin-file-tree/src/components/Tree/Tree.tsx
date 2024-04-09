@@ -4,6 +4,7 @@ import TreeFolder from './TreeFolder';
 import { TreeContext } from './TreeContext';
 import { sortChildren } from '../helpers';
 import { buildClassName } from '../presets';
+import { useDark } from 'rspress/runtime';
 
 export const tuple = <T extends string[]>(...args: T) => args;
 
@@ -70,7 +71,6 @@ const Tree: React.FC<React.PropsWithChildren<TreeProps>> = ({
   className,
   ...props
 }: React.PropsWithChildren<TreeProps> & typeof defaultProps) => {
-  console.log('04-08 props: ', props);
   if (!tree) return null;
 
   const isImperative = Boolean(tree.length > 0);
@@ -91,9 +91,11 @@ const Tree: React.FC<React.PropsWithChildren<TreeProps>> = ({
     ? makeChildren(tree)
     : sortChildren(children, TreeFolder);
 
+  const dark = useDark();
+
   return (
     <TreeContext.Provider value={initialValue}>
-      <div className={buildClassName()} {...props}>
+      <div data-dark={String(dark)} className={buildClassName()} {...props}>
         {customChildren}
       </div>
     </TreeContext.Provider>

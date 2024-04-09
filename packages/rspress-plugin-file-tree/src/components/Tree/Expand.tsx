@@ -112,11 +112,12 @@ const Expand: React.FC<React.PropsWithChildren<ExpandProps>> = ({
 
   return (
     <div
-      className={clsx('rspress-file-tree-expand-container')}
+      className={clsx('rspress-file-tree-expand-container', {})}
       style={{
-        height: isExpanded ? height : 0,
+        height: 0,
         visibility: visible ? 'visible' : 'hidden',
         transition: `height ${delay}ms ease`,
+        ...(selfExpanded ? { height, visibility: 'visible' } : {}),
       }}
     >
       <div
