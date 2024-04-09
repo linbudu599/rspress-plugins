@@ -10,6 +10,7 @@
     "build": "pnpm run clean && pnpm packages:build",
     "commit": "git add -A && czg",
     "packages:build": "pnpm -r --filter=./packages/**/* run build",
+    "packages:build:p": "pnpm --parallel --filter=./packages/**/* run build",
     "test": "vitest",
     "testu": "vitest --update",
     "test:cov": "vitest --coverage"

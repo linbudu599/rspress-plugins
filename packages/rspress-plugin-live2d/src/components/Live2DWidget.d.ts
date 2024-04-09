@@ -4,4 +4,3 @@ export interface Live2DWidgetProps extends OnMyLive2DOptions {
 }
 declare const Live2DWidget: React.FC<Live2DWidgetProps>;
 export default Live2DWidget;
-//# sourceMappingURL=Live2DWidget.d.ts.map

@@ -3,6 +3,6 @@
     "rootDir": "src",
     "outDir": "dist"
   },
-  "include": ["src", "src/components/Fallback/.tsx"],
+  "include": ["src"],
   "extends": "../../tsconfig.base.json"
 }

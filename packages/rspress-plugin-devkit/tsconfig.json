@@ -3,6 +3,6 @@
     "rootDir": "src",
     "outDir": "dist"
   },
-  "include": ["src", "../rspress-plugin-live2d"],
+  "include": ["src"],
   "extends": "../../tsconfig.base.json"
 }

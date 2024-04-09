@@ -7,6 +7,6 @@
       "rspress-plugin-back-to-top": ["src/index.ts"]
     }
   },
-  "include": ["src", "../../s.ts"],
+  "include": ["src"],
   "extends": "../../tsconfig.base.json"
 }

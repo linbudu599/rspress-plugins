@@ -51,7 +51,6 @@ export default function SearchPage() {
                   return (
                     <li>
                       <span>{res.title}</span>
-                      <p>{res.statement}</p>
                     </li>
                   );
                 })}
