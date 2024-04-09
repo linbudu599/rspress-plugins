@@ -1,3 +1,5 @@
+import path from 'path';
+
 import { ComponentRegistration, RemarkPluginFactoryBase } from './FactoryBase';
 import { unistVisit } from '../Exports/Unist';
 import { MdxJsxElementFactory } from '../NodeFactory/MdxJsxElementFactory';
@@ -29,7 +31,7 @@ export class RemarkCodeBlockToGlobalComponentPluginFactory extends RemarkPluginF
                 1,
                 // @ts-expect-error
                 MdxJsxElementFactory.createMdxJsxFlowElementNode(code.value, {
-                  componentPath,
+                  componentName: path.basename(componentPath, '.tsx'),
                   propsProvider,
                   childrenProvider,
                 }),

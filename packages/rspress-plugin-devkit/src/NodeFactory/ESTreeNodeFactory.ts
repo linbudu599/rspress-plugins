@@ -11,11 +11,58 @@ import type {
   Statement,
   Identifier,
   ArrayExpression,
+  ImportDeclaration,
+  ImportSpecifier,
+  ImportDefaultSpecifier,
+  ModuleDeclaration,
 } from 'estree-jsx';
 
 import type { Primitive } from '../Shared';
 
 export class ESTreeNodeFactory {
+  private static createNamedImportSpecifierNode(name: string): ImportSpecifier {
+    return {
+      type: 'ImportSpecifier',
+      imported: ESTreeNodeFactory.createIdentifierNode(name),
+      local: ESTreeNodeFactory.createIdentifierNode(name),
+    };
+  }
+
+  private static createDefaultImportSpecifierNode(
+    name: string,
+  ): ImportDefaultSpecifier {
+    return {
+      type: 'ImportDefaultSpecifier',
+      local: ESTreeNodeFactory.createIdentifierNode(name),
+    };
+  }
+
+  public static createNamedImportDeclarationNode(
+    specifiers: string[],
+    source: string,
+  ): ImportDeclaration {
+    return {
+      type: 'ImportDeclaration',
+      specifiers: specifiers.map((specifier) =>
+        ESTreeNodeFactory.createNamedImportSpecifierNode(specifier),
+      ),
+      source: ESTreeNodeFactory.createLiteralNode(source),
+    };
+  }
+
+  public static createDefaultImportDeclarationNode(
+    specifier: string,
+    source: string,
+  ): ImportDeclaration {
+    return {
+      type: 'ImportDeclaration',
+      specifiers: [
+        ESTreeNodeFactory.createDefaultImportSpecifierNode(specifier),
+      ],
+      source: ESTreeNodeFactory.createLiteralNode(source),
+    };
+  }
+
   private static createBasePropertyNode(): StrictOmit<
     Property,
     'key' | 'value'
@@ -144,7 +191,9 @@ export class ESTreeNodeFactory {
     };
   }
 
-  public static createESTreeProgramNode(statements: Statement[]): Program {
+  public static createESTreeProgramNode(
+    statements: (Statement | ModuleDeclaration)[],
+  ): Program {
     return {
       type: 'Program',
       sourceType: 'module',

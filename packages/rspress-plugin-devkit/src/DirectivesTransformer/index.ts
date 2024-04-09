@@ -6,9 +6,9 @@ import { unistVisit, type RemarkPluginFactory } from '../Exports/Unist';
 
 import { createTuple } from '../Utils/createTuple';
 import { ensureArray } from '../Utils/ensureArray';
-import { normalizeMDXComponentAttrs } from '../Utils/normalizeMDXComponentAttrs';
 
 import type { Content } from 'mdast';
+import { MdxAttrNodeFactory } from '../NodeFactory/MdxAttrNodeFactory';
 
 /**
  * Directives can be transformed to:
@@ -87,7 +87,8 @@ export const remarkTransformDirective: RemarkPluginFactory<
           parent!.children.splice(index, 1, ...content);
         } else if (transformerType === 'globalComponent') {
           const attrsNormalizer =
-            transformer?.getComponentProps ?? normalizeMDXComponentAttrs;
+            transformer?.getComponentProps ??
+            MdxAttrNodeFactory.createMdxJsxAttributeNodes;
 
           parent!.children.splice(index, 1, {
             type: 'mdxJsxFlowElement',
