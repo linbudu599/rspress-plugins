@@ -6,5 +6,5 @@ export interface TocOptions {
   skip?: string;
   tight?: boolean;
   ordered?: boolean;
-  tocHeading?: string;
+  tocHeading?: string | boolean;
 }

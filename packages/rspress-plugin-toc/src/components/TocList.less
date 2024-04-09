@@ -1,10 +1,90 @@
 @rp-toc-container: ~'rp-toc-container';
 
+@rp-toc-heading-color-light: ~'rgba(60, 60, 60, 0.66)';
+
+@rp-toc-heading-hover-color-light: #213547;
+@rp-toc-heading-hover-bg-color-light: #f1f1f1;
+
+@rp-toc-heading-color-dark: ~'rgba(235, 235, 235, 0.56)';
+
+@rp-toc-heading-hover-color-dark: rgba(255, 255, 255, 0.87);
+@rp-toc-heading-hover-bg-color-dark: #3a3a3a;
+
 .@{rp-toc-container} {
   @media print {
     display: none;
   }
 
-  & [data-dark='false'] {
+  ul,
+  ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-top: 0 !important;
+
+      a {
+        display: block;
+        border-radius: 0.5rem;
+        transition: all 0.3s;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+
+        font-weight: 400 !important;
+
+        padding: 6px 12px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        transition: all 0.2s ease-in-out;
+        border-radius: 0.5rem;
+
+        border-bottom: none !important;
+
+        color: @rp-toc-heading-color-dark;
+
+        &:hover {
+          background-color: @rp-toc-heading-hover-bg-color-dark;
+          color: @rp-toc-heading-hover-color-dark;
+        }
+      }
+
+      & > ul {
+        padding-left: 12px;
+      }
+    }
+  }
+}
+
+.@{rp-toc-container}-dark {
+  ul,
+  ol {
+    li {
+      a {
+        color: @rp-toc-heading-color-dark;
+
+        &:hover {
+          background-color: @rp-toc-heading-hover-bg-color-dark;
+          color: @rp-toc-heading-hover-color-dark;
+        }
+      }
+    }
+  }
+}
+
+.@{rp-toc-container}-light {
+  ul,
+  ol {
+    li {
+      a {
+        color: @rp-toc-heading-color-light;
+
+        &:hover {
+          background-color: @rp-toc-heading-hover-bg-color-light;
+          color: @rp-toc-heading-hover-color-light;
+        }
+      }
+    }
   }
 }

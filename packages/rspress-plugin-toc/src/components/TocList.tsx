@@ -9,7 +9,11 @@ const Toc: React.FC<TocComponentProps> = (props) => {
   const dark = useDark();
 
   return (
-    <div data-dark={String(dark)} className={'rp-toc-container'}>
+    <div
+      className={`rp-toc-container ${
+        dark ? 'rp-toc-container-dark' : 'rp-toc-container-light'
+      }`}
+    >
       {props.children}
     </div>
   );

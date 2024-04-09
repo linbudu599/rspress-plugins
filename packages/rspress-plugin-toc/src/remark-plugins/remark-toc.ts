@@ -15,22 +15,38 @@ export default function remarkTocPluginFactory(): RemarkPluginFactory<RemarkTocO
     const {
       maxDepth = 4,
       tight = true,
-      ordered = true,
-      tocHeading = 'Table of Contents',
-      useOfficialComponent,
+      ordered = false,
+      tocHeading = true,
+      useOfficialComponent = false,
       skip,
     } = options;
 
-    return (tree, vfile) => {
-      if (useOfficialComponent) {
-        const firstH1Heading = tree.children.findIndex((c) => {
-          return c.type === 'heading' && c.depth === 1;
-        });
+    const enableInjectTocHeading = tocHeading !== false;
 
+    const tocHeadingText =
+      typeof tocHeading === 'string'
+        ? tocHeading
+        : tocHeading === true
+          ? 'Table of Contents'
+          : '';
+
+    return (tree, vfile) => {
+      const firstH1Heading = tree.children.findIndex((c) => {
+        return c.type === 'heading' && c.depth === 1;
+      });
+
+      if (enableInjectTocHeading) {
         tree.children.splice(
           firstH1Heading + 1,
           0,
-          MDASTNodeFactory.createHeadingNode(tocHeading, 2),
+          MDASTNodeFactory.createHeadingNode(tocHeadingText, 2),
+        );
+      }
+
+      if (useOfficialComponent) {
+        tree.children.splice(
+          enableInjectTocHeading ? firstH1Heading + 2 : firstH1Heading + 1,
+          0,
           // @ts-expect-error
           MdxJsxElementFactory.createMdxJsxFlowElementNode({}, 'Toc'),
         );
@@ -52,7 +68,7 @@ export default function remarkTocPluginFactory(): RemarkPluginFactory<RemarkTocO
         tight,
         ordered,
         skip,
-        heading: tocHeading,
+        heading: tocHeadingText,
       });
 
       if (

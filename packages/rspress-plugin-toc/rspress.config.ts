@@ -7,7 +7,7 @@ export default defineConfig({
   title: 'Rspress x Toc Example',
   plugins: [
     toc({
-      useOfficialComponent: true,
+      useOfficialComponent: false,
     }),
   ],
 });

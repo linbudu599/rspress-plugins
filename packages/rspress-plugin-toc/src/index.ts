@@ -23,7 +23,10 @@ export default function rspressPluginToc(
       remarkPlugins: [
         [remarkTocPluginFactory(), options satisfies RemarkTocOptions],
       ],
-      globalComponents: [path.join(__dirname, './components', './TocList.tsx')],
+      globalComponents:
+        options.useOfficialComponent === false
+          ? [path.join(__dirname, './components', './TocList.tsx')]
+          : [],
     },
   };
 }
