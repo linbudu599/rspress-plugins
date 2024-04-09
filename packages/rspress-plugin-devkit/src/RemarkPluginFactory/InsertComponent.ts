@@ -46,11 +46,14 @@ export class RemarkInsertComponentPluginFactory extends RemarkPluginFactoryBase 
               insertIndex,
               0,
               // @ts-expect-error
-              MdxJsxElementFactory.createMdxJsxFlowElementNode(null, {
-                componentName: path.basename(componentPath, '.tsx'),
-                propsProvider,
-                childrenProvider,
-              }),
+              MdxJsxElementFactory.createMdxJsxFlowElementNode<any>(
+                {},
+                {
+                  componentName: path.basename(componentPath, '.tsx'),
+                  propsProvider,
+                  childrenProvider,
+                },
+              ),
             );
           },
         );

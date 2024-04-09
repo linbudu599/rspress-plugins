@@ -6,7 +6,7 @@ import { uniqArray } from '../Utils/uniqArray';
 type RsbuildConfig = NonNullable<RspressPlugin['builderConfig']>;
 export interface ComponentRegistration<ComponentMetaProvider = void> {
   componentPath: string;
-  propsProvider?: (input: ComponentMetaProvider) => Dictionary<unknown>;
+  propsProvider?: (input: ComponentMetaProvider) => Dictionary<any>;
   childrenProvider?: (input: ComponentMetaProvider) => Content[];
 }
 
