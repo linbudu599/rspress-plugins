@@ -1,14 +1,14 @@
 {
-  "name": "rspress-plugin-file-tree",
+  "name": "rspress-plugin-toc",
   "version": "0.1.0",
-  "description": "Rspress plugin that add support for file tree component.",
+  "description": "Rspress plugin that add a table of contents to your document page.",
   "keywords": [
     "rspress",
     "plugin",
-    "file-tree",
-    "tree"
+    "table of contents",
+    "toc"
   ],
-  "homepage": "https://github.com/linbudu599/rspress-plugins/tree/main/packages/rspress-plugin-file-tree#readme",
+  "homepage": "https://github.com/linbudu599/rspress-plugins/tree/main/packages/rspress-plugin-toc#readme",
   "bugs": {
     "url": "https://github.com/linbudu599/rspress-plugins/issues"
   },
@@ -29,11 +29,14 @@
   },
   "dependencies": {
     "@rspress/shared": "^1.17.1",
+    "mdast-util-toc": "^6.1.1",
     "rspress-plugin-devkit": "workspace:^"
   },
   "devDependencies": {
     "@types/node": "^20.12.5",
     "@types/react": "^18.2.74",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^5.4.4"
   },
   "peerDependencies": {

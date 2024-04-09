@@ -8,15 +8,7 @@
 ```
 ````
 
-## Directive Usgae
-
-```markdown
-:::tree
-
-:::
-```
-
-## Component Usage
+<!-- ## Component Usage
 
 ```markdown
 <Tree>
@@ -28,4 +20,4 @@
     </TreeDir>
   </TreeDir>
 </Tree>
-```
+``` -->

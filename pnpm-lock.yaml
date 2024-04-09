@@ -190,6 +190,37 @@ importers:
         specifier: ^5.4.4
         version: 5.4.4
 
+  packages/rspress-plugin-demo-helper:
+    dependencies:
+      '@rspress/shared':
+        specifier: ^1.17.1
+        version: 1.17.1
+      mdast-util-toc:
+        specifier: ^6.1.1
+        version: 6.1.1
+      rspress:
+        specifier: '*'
+        version: 1.17.1(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../rspress-plugin-devkit
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.5
+        version: 20.12.5
+      '@types/react':
+        specifier: ^18.2.74
+        version: 18.2.74
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      typescript:
+        specifier: ^5.4.4
+        version: 5.4.4
+
   packages/rspress-plugin-devkit:
     dependencies:
       '@rspress/shared':
@@ -219,6 +250,9 @@ importers:
       mdast-util-mdx-jsx:
         specifier: ^3.1.2
         version: 3.1.2
+      mdast-util-mdxjs-esm:
+        specifier: ^2.0.1
+        version: 2.0.1
       mdast-util-to-markdown:
         specifier: ^1.5.0
         version: 1.5.0
@@ -350,40 +384,6 @@ importers:
       '@types/react':
         specifier: ^18.2.74
         version: 18.2.74
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      typescript:
-        specifier: ^5.4.4
-        version: 5.4.4
-
-  packages/rspress-plugin-inject-toc:
-    dependencies:
-      '@rspress/shared':
-        specifier: ^1.17.1
-        version: 1.17.1
-      rspress:
-        specifier: '*'
-        version: 1.17.1(webpack@5.91.0)
-      rspress-plugin-devkit:
-        specifier: workspace:^
-        version: link:../rspress-plugin-devkit
-      throttle-debounce:
-        specifier: ^5.0.0
-        version: 5.0.0
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.5
-        version: 20.12.5
-      '@types/react':
-        specifier: ^18.2.74
-        version: 18.2.74
-      '@types/throttle-debounce':
-        specifier: ^5.0.2
-        version: 5.0.2
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -555,6 +555,37 @@ importers:
       '@types/throttle-debounce':
         specifier: ^5.0.2
         version: 5.0.2
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      typescript:
+        specifier: ^5.4.4
+        version: 5.4.4
+
+  packages/rspress-plugin-toc:
+    dependencies:
+      '@rspress/shared':
+        specifier: ^1.17.1
+        version: 1.17.1
+      mdast-util-toc:
+        specifier: ^6.1.1
+        version: 6.1.1
+      rspress:
+        specifier: '*'
+        version: 1.17.1(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../rspress-plugin-devkit
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.5
+        version: 20.12.5
+      '@types/react':
+        specifier: ^18.2.74
+        version: 18.2.74
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -2459,6 +2490,10 @@ packages:
 
   /@types/estree@1.0.5:
     resolution: {integrity: sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==}
+
+  /@types/extend@3.0.4:
+    resolution: {integrity: sha512-ArMouDUTJEz1SQRpFsT2rIw7DeqICFv5aaVzLSIYMYQSLcwcGOfT3VyglQs/p7K3F7fT4zxr0NWxYZIdifD6dA==}
+    dev: false
 
   /@types/fs-extra@11.0.4:
     resolution: {integrity: sha512-yTbItCNreRooED33qjunPthRcSjERP1r4MqCZc7wv0u2sUkzTFp45tgUfS5+r7FrZPdmCCNflLhVSP/o+SemsQ==}
@@ -6960,6 +6995,19 @@ packages:
       - supports-color
     dev: false
 
+  /mdast-util-mdxjs-esm@2.0.1:
+    resolution: {integrity: sha512-EcmOpxsZ96CvlP03NghtH1EsLtr0n9Tm4lPUJUBccV9RwUOneqSycg19n5HGzCf+10LozMRSObtVr3ee1WoHtg==}
+    dependencies:
+      '@types/estree-jsx': 1.0.5
+      '@types/hast': 3.0.4
+      '@types/mdast': 4.0.3
+      devlop: 1.1.0
+      mdast-util-from-markdown: 2.0.0
+      mdast-util-to-markdown: 2.1.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /mdast-util-phrasing@3.0.1:
     resolution: {integrity: sha512-WmI1gTXUBJo4/ZmSk79Wcb2HcjPJBzM1nlI/OUWA8yk2X9ik3ffNbBGsU+09BFmXaL1IBb9fiuvq6/KMiNycSg==}
     dependencies:
@@ -7023,6 +7071,18 @@ packages:
     resolution: {integrity: sha512-0H44vDimn51F0YwvxSJSm0eCDOJTRlmN0R1yBh4HLj9wiV1Dn0QoXGbvFAWj2hSItVTlCmBF1hqKlIyUBVFLPg==}
     dependencies:
       '@types/mdast': 4.0.3
+    dev: false
+
+  /mdast-util-toc@6.1.1:
+    resolution: {integrity: sha512-Er21728Kow8hehecK2GZtb7Ny3omcoPUVrmObiSUwmoRYVZaXLR751QROEFjR8W/vAQdHMLj49Lz20J55XaNpw==}
+    dependencies:
+      '@types/extend': 3.0.4
+      '@types/mdast': 3.0.15
+      extend: 3.0.2
+      github-slugger: 2.0.0
+      mdast-util-to-string: 3.2.0
+      unist-util-is: 5.2.1
+      unist-util-visit: 4.1.2
     dev: false
 
   /mdn-data@2.0.30:
@@ -10469,7 +10529,7 @@ packages:
     engines: {node: '>=10.13.0'}
     dependencies:
       glob-to-regexp: 0.4.1
-      graceful-fs: 4.2.10
+      graceful-fs: 4.2.11
     dev: false
 
   /wcwidth@1.0.1:
