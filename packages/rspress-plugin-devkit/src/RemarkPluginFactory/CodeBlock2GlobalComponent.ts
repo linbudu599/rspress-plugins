@@ -1,8 +1,7 @@
-import path from 'path';
-
 import { ComponentRegistration, RemarkPluginFactoryBase } from './FactoryBase';
 import { unistVisit } from '../Exports/Unist';
 import { MdxJsxElementFactory } from '../NodeFactory/MdxJsxElementFactory';
+import { getComponentName } from '../Utils/registerComponent';
 
 import type { Plugin } from 'unified';
 import type { Root } from 'mdast';
@@ -21,9 +20,10 @@ export class RemarkCodeBlockToGlobalComponentPluginFactory extends RemarkPluginF
   }
 
   public get remarkPlugin(): Plugin<[unknown], Root> {
+    const components = this.options?.components ?? [];
     return () => (tree, vfile) => {
       unistVisit(tree, 'code', (code, index = 0, parent) => {
-        this.options.components.forEach(
+        components.forEach(
           ({ lang, componentPath, propsProvider, childrenProvider }) => {
             if (code.lang === lang) {
               parent!.children.splice(
@@ -31,7 +31,7 @@ export class RemarkCodeBlockToGlobalComponentPluginFactory extends RemarkPluginF
                 1,
                 // @ts-expect-error
                 MdxJsxElementFactory.createMdxJsxFlowElementNode(code.value, {
-                  componentName: path.basename(componentPath, '.tsx'),
+                  componentName: getComponentName(componentPath),
                   propsProvider,
                   childrenProvider,
                 }),

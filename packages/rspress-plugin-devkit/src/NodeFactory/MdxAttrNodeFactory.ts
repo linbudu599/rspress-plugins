@@ -7,11 +7,13 @@ import { ESTreeNodeFactory } from './ESTreeNodeFactory';
 
 export class MdxAttrNodeFactory {
   public static createMdxJsxAttributeNodes(attributes: Dictionary<any>) {
-    const parsedAttrs = Object.entries(attributes)?.map(([key, val]) => {
-      return isObject(val) || Array.isArray(val)
-        ? MdxAttrNodeFactory.createMdxJsxExpressionAttributeNode(key, val)
-        : MdxAttrNodeFactory.createMdxJsxLiteralAttributeNode(key, val);
-    });
+    const parsedAttrs = Object.entries(attributes)
+      ?.filter(([_, v]) => typeof v !== 'undefined' && v !== null)
+      ?.map(([key, val]) => {
+        return isObject(val) || Array.isArray(val)
+          ? MdxAttrNodeFactory.createMdxJsxExpressionAttributeNode(key, val)
+          : MdxAttrNodeFactory.createMdxJsxLiteralAttributeNode(key, val);
+      });
 
     return parsedAttrs;
   }
