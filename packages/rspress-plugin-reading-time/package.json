@@ -1,26 +1,47 @@
 {
   "name": "rspress-plugin-reading-time",
-  "version": "1.0.0",
+  "version": "0.1.0",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "description": "Rspress plugin to render reading-time for pages.",
+  "keywords": [
+    "rspress",
+    "plugin",
+    "reading-time"
+  ],
+  "homepage": "https://github.com/linbudu599/rspress-plugins/tree/main/packages/rspress-plugin-reading-time#readme",
+  "bugs": {
+    "url": "https://github.com/linbudu599/rspress-plugins/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linbudu599/rspress-plugins.git"
+  },
+  "license": "MIT",
+  "author": "Linbudu <linbudu599@gmail.com> (https://github.com/linbudu599)",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc --declarationMap false",
     "dev": "tsc -w",
     "docs:build": "rspress build",
-    "docs:dev": "rspress dev"
+    "docs:dev": "rspress dev",
+    "prepublish": "npm run build"
   },
   "dependencies": {
-    "@giscus/react": "^3.0.0",
     "@rspress/shared": "^1.17.1",
+    "reading-time": "^1.5.0",
     "rspress-plugin-devkit": "workspace:^"
-  },
-  "peerDependencies": {
-    "rspress": "*"
   },
   "devDependencies": {
     "@types/node": "^20.12.5",
     "@types/react": "^18.2.74",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
     "typescript": "^5.4.4"
+  },
+  "peerDependencies": {
+    "rspress": "*"
   }
 }

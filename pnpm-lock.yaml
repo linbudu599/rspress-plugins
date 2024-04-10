@@ -477,12 +477,12 @@ importers:
 
   packages/rspress-plugin-reading-time:
     dependencies:
-      '@giscus/react':
-        specifier: ^3.0.0
-        version: 3.0.0(react-dom@18.2.0)(react@18.2.0)
       '@rspress/shared':
         specifier: ^1.17.1
         version: 1.17.1
+      reading-time:
+        specifier: ^1.5.0
+        version: 1.5.0
       rspress:
         specifier: '*'
         version: 1.17.1(webpack@5.91.0)
@@ -496,12 +496,6 @@ importers:
       '@types/react':
         specifier: ^18.2.74
         version: 18.2.74
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
       typescript:
         specifier: ^5.4.4
         version: 5.4.4
@@ -8873,6 +8867,10 @@ packages:
     engines: {node: '>=8.10.0'}
     dependencies:
       picomatch: 2.3.1
+    dev: false
+
+  /reading-time@1.5.0:
+    resolution: {integrity: sha512-onYyVhBNr4CmAxFsKS7bz+uTLRakypIe4R+5A824vBSkQy/hB3fZepoVEf8OVAxzLvK+H/jm9TzpI3ETSm64Kg==}
     dev: false
 
   /redent@3.0.0:

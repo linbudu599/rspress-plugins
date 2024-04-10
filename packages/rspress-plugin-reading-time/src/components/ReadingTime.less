@@ -1,0 +1,19 @@
+@rp-reading-time: ~'rp-reading-time';
+
+@rp-reading-time-color-light: ~'rgba(60, 60, 60, 0.66)';
+@rp-reading-time-color-dark: ~'rgba(235, 235, 235, 0.56)';
+
+.@{rp-reading-time} {
+  position: relative;
+  top: -18px;
+  font-style: italic;
+  font-size: 15px;
+
+  &[data-dark='true'] {
+    color: @rp-reading-time-color-dark;
+  }
+
+  &[data-dark='false'] {
+    color: @rp-reading-time-color-light;
+  }
+}

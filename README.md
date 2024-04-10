@@ -14,10 +14,6 @@
 - [x] rspress-plugin-mermaid
 - [x] rspress-plugin-file-tree
 
-### References
-
-- [ ] rspress-plugin-tsdoc
-
 ### Extension
 
 - [x] rspress-plugin-directives
@@ -27,15 +23,11 @@
 
 - [ ] rspress-theme-geist ([#901](https://github.com/web-infra-dev/rspress/issues/901))
 - [x] rspress-plugin-back-to-top
-- [ ] rspress-plugin-comment
+- [x] rspress-plugin-comment
 - [x] rspress-plugin-live2d
+- [x] rspress-plugin-toc
 - [ ] rspress-plugin-search-page
 - [ ] rspress-plugin-reading-time
-
-### CMS
-
-- [ ] rspress-plugin-contentful
-- [ ] rspress-plugin-strapi
 
 ### Deploy
 
