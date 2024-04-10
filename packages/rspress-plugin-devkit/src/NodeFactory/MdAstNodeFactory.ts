@@ -31,6 +31,19 @@ export class MDASTNodeFactory {
     };
   }
 
+  public static createAnyNodeParagraphNode(...contents: any): Paragraph {
+    const children = contents.map((content) =>
+      typeof content === 'string'
+        ? MDASTNodeFactory.createTextChildren(content)[0]
+        : content,
+    );
+
+    return {
+      type: 'paragraph',
+      children,
+    };
+  }
+
   public static createLinkNode(text: string, url: string): Link {
     return {
       type: 'link',

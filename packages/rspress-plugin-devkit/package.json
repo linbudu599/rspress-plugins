@@ -40,6 +40,7 @@
     "mdast-util-to-markdown": "^1.5.0",
     "mdast-util-to-string": "^4.0.0",
     "remark-mdc": "1.2.0",
+    "ts-morph": "^22.0.0",
     "unified": "^10.1.2",
     "unist-util-visit": "^5.0.0",
     "unist-util-visit-parents": "^6.0.1",

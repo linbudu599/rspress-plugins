@@ -18,7 +18,10 @@ export { ESTreeNodeFactory } from './NodeFactory/ESTreeNodeFactory';
 export { MdxAttrNodeFactory } from './NodeFactory/MdxAttrNodeFactory';
 export { MdxJsxElementFactory } from './NodeFactory/MdxJsxElementFactory';
 
+export { TSSourceParser } from './SourceParser/TS.mjs';
+
 export { createTuple } from './Utils/createTuple';
 export { ensureArray } from './Utils/ensureArray';
 export { uniqArray } from './Utils/uniqArray';
+export { resolveSourcePath } from './Utils//resolveSourcePath';
 export * from './Utils/is';
