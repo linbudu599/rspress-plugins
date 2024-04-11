@@ -25,7 +25,7 @@
     "dev": "tsc -w",
     "docs:build": "rspress build",
     "docs:dev": "rspress dev",
-    "prepublish": "npm run build"
+    "prepublish": "rm -rf dist && npm run build"
   },
   "dependencies": {
     "@rspress/shared": "^1.17.1",

@@ -1,5 +1,5 @@
 {
-  "name": "rspress-plugin-mermaid",
+  "name": "rspress-plugin-google-analytics",
   "version": "0.1.0",
   "description": "Rspress plugin to render mermaid diagrams",
   "keywords": [

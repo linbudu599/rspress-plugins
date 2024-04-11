@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "rootDir": "../rspress-plugin-vercel-analytics/src",
+    "outDir": "../rspress-plugin-vercel-analytics/dist"
+  },
+  "include": ["../rspress-plugin-vercel-analytics/src"],
+  "extends": "../../tsconfig.base.json"
+}
