@@ -1,13 +1,14 @@
 {
   "name": "rspress-plugin-vercel-analytics",
-  "version": "0.1.0",
-  "description": "Rspress plugin to render mermaid diagrams",
+  "version": "0.1.1",
+  "description": "Rspress plugin for vercel analytics",
   "keywords": [
     "rspress",
     "plugin",
-    "mermaid"
+    "vercel",
+    "vercel analytics"
   ],
-  "homepage": "https://github.com/linbudu599/rspress-plugins/tree/main/packages/rspress-plugin-mermaid#readme",
+  "homepage": "https://github.com/linbudu599/rspress-plugins/tree/main/packages/rspress-plugin-vercel-analytics#readme",
   "bugs": {
     "url": "https://github.com/linbudu599/rspress-plugins/issues"
   },
@@ -28,7 +29,7 @@
   },
   "dependencies": {
     "@rspress/shared": "^1.17.1",
-    "mermaid": "^10.9.0",
+    "@vercel/analytics": "^1.2.2",
     "rspress-plugin-devkit": "workspace:^"
   },
   "devDependencies": {

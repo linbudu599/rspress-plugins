@@ -667,9 +667,9 @@ importers:
       '@rspress/shared':
         specifier: ^1.17.1
         version: 1.17.1
-      mermaid:
-        specifier: ^10.9.0
-        version: 10.9.0
+      '@vercel/analytics':
+        specifier: ^1.2.2
+        version: 1.2.2(react@18.2.0)
       rspress:
         specifier: '*'
         version: 1.17.1(webpack@5.91.0)
@@ -2771,6 +2771,21 @@ packages:
     resolution: {integrity: sha512-vmQSUcfalpIq0R9q7uTo2lXs6eGIpt9wtnLdMv9LVpIjCA/+ufZRozlVoVelIYixx1ugCBKDhn89vnsEGOCx9A==}
     dependencies:
       '@types/node': 20.12.5
+    dev: false
+
+  /@vercel/analytics@1.2.2(react@18.2.0):
+    resolution: {integrity: sha512-X0rctVWkQV1e5Y300ehVNqpOfSOufo7ieA5PIdna8yX/U7Vjz0GFsGf4qvAhxV02uQ2CVt7GYcrFfddXXK2Y4A==}
+    peerDependencies:
+      next: '>= 13'
+      react: ^18 || ^19
+    peerDependenciesMeta:
+      next:
+        optional: true
+      react:
+        optional: true
+    dependencies:
+      react: 18.2.0
+      server-only: 0.0.1
     dev: false
 
   /@vitest/coverage-v8@1.4.0(vitest@1.4.0):
@@ -9510,6 +9525,10 @@ packages:
       send: 0.18.0
     transitivePeerDependencies:
       - supports-color
+    dev: false
+
+  /server-only@0.0.1:
+    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
     dev: false
 
   /set-blocking@2.0.0:
