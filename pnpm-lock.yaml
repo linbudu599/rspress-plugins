@@ -190,37 +190,6 @@ importers:
         specifier: ^5.4.4
         version: 5.4.4
 
-  packages/rspress-plugin-demo-helper:
-    dependencies:
-      '@rspress/shared':
-        specifier: ^1.17.1
-        version: 1.17.1
-      mdast-util-toc:
-        specifier: ^6.1.1
-        version: 6.1.1
-      rspress:
-        specifier: '*'
-        version: 1.17.1(webpack@5.91.0)
-      rspress-plugin-devkit:
-        specifier: workspace:^
-        version: link:../rspress-plugin-devkit
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.5
-        version: 20.12.5
-      '@types/react':
-        specifier: ^18.2.74
-        version: 18.2.74
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      typescript:
-        specifier: ^5.4.4
-        version: 5.4.4
-
   packages/rspress-plugin-devkit:
     dependencies:
       '@rspress/shared':
@@ -356,6 +325,28 @@ importers:
       '@types/node':
         specifier: ^20.12.5
         version: 20.12.5
+      typescript:
+        specifier: ^5.4.4
+        version: 5.4.4
+
+  packages/rspress-plugin-google-analytics:
+    dependencies:
+      '@rspress/shared':
+        specifier: ^1.17.1
+        version: 1.17.1
+      rspress:
+        specifier: '*'
+        version: 1.17.1(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../rspress-plugin-devkit
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.5
+        version: 20.12.5
+      '@types/react':
+        specifier: ^18.2.74
+        version: 18.2.74
       typescript:
         specifier: ^5.4.4
         version: 5.4.4
@@ -503,7 +494,7 @@ importers:
         specifier: ^5.4.4
         version: 5.4.4
 
-  packages/rspress-plugin-pdf:
+  packages/rspress-plugin-pwa:
     dependencies:
       '@rspress/shared':
         specifier: ^1.17.1
@@ -671,14 +662,14 @@ importers:
         specifier: ^5.4.4
         version: 5.4.4
 
-  packages/rspress-plugin-tsdoc:
+  packages/rspress-plugin-vercel-analytics:
     dependencies:
-      '@rspress/plugin-container-syntax':
-        specifier: ^1.17.1
-        version: 1.17.1
       '@rspress/shared':
         specifier: ^1.17.1
         version: 1.17.1
+      mermaid:
+        specifier: ^10.9.0
+        version: 10.9.0
       rspress:
         specifier: '*'
         version: 1.17.1(webpack@5.91.0)
@@ -692,12 +683,6 @@ importers:
       '@types/react':
         specifier: ^18.2.74
         version: 18.2.74
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
       typescript:
         specifier: ^5.4.4
         version: 5.4.4

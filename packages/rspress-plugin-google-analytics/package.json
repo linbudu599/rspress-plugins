@@ -1,13 +1,19 @@
 {
   "name": "rspress-plugin-google-analytics",
   "version": "0.1.0",
-  "description": "Rspress plugin to render mermaid diagrams",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "description": "rspress plugin for google analytics",
   "keywords": [
     "rspress",
     "plugin",
-    "mermaid"
+    "gtag",
+    "google-analytics"
   ],
-  "homepage": "https://github.com/linbudu599/rspress-plugins/tree/main/packages/rspress-plugin-mermaid#readme",
+  "homepage": "https://github.com/linbudu599/rspress-plugins/tree/main/packages/rspress-plugin-google-analytics#readme",
   "bugs": {
     "url": "https://github.com/linbudu599/rspress-plugins/issues"
   },
@@ -28,7 +34,6 @@
   },
   "dependencies": {
     "@rspress/shared": "^1.17.1",
-    "mermaid": "^10.9.0",
     "rspress-plugin-devkit": "workspace:^"
   },
   "devDependencies": {
