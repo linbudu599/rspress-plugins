@@ -7,6 +7,7 @@
 ### Syntax
 
 - [x] rspress-plugin-supersub
+- [x] rspress-plugin-katex
 - [ ] rspress-plugin-obsidian
 
 ### Code Transformers
@@ -23,11 +24,18 @@
 
 - [ ] rspress-theme-geist ([#901](https://github.com/web-infra-dev/rspress/issues/901))
 - [x] rspress-plugin-back-to-top
-- [x] rspress-plugin-comment
 - [x] rspress-plugin-live2d
 - [x] rspress-plugin-toc
 - [ ] rspress-plugin-search-page
-- [ ] rspress-plugin-reading-time
+- [x] rspress-plugin-reading-time
+
+### Site
+
+- [x] rspress-plugin-comment
+- [x] rspress-plugin-google-analytics
+- [x] rspress-plugin-vercel-analytics
+- [ ] rspress-plugin-sitemap
+- [ ] rspress-plugin-pwa
 
 ### Deploy
 
