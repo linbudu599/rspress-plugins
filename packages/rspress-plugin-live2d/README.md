@@ -38,4 +38,4 @@ export default defineConfig({
 
 ## Configure
 
-Find more models on [Model Resources](https://oml2d.com/guide/models.html).
+Find more models and configuration on [On My Live2D](https://oml2d.com/guide/models.html).

@@ -30,12 +30,11 @@ export default defineConfig({
 
 ## Configure
 
-## repo
+## directory
+
+Target directory to push to the `gh-pages` branch, `config.outDir` will be used if this configuration is not specified.
 
 - Type: `string`
-- `Required`
-
-The repository to deploy to, you can also specify another repository to deploy to.
 
 ## siteBase
 
@@ -43,4 +42,20 @@ The repository to deploy to, you can also specify another repository to deploy t
 
 Deploying to repositories other than the `<user>.github.io` repository requires specifying the `siteBase` option, as an example, deploying to repository `<user>/awesome-plugins` will require setting `siteBase` to `/awesome-plugins`, as the page will be hosted at `https://<user>.github.io/awesome-plugins`.
 
-By default, `rspress-plugin-gh-pages` will try to parse the `repo` option to get a `siteBase` value(if repo is a `github.io` repository, the `siteBase` will be `/`, otherwise, the `siteBase` will be `/<repo-name>`), you can also specify the `siteBase` option to override the default value.
+By default, this plugin will try to parse the `repo` option to get a `siteBase` value(if repo is a `github.io` repository, the `siteBase` will be `/`, otherwise, the `siteBase` will be `/<repo-name>`), you can also specify the `siteBase` option to override the default value.
+
+## silent
+
+Disable terminal log output from this plugin.
+
+- Type: `boolean`
+- Default: false
+
+## repo
+
+- Type: `string`
+- `Required`
+
+The repository to deploy to, you can also specify another repository to deploy to.
+
+More options can be found in documentation of [gh-pages](https://github.com/tschaub/gh-pages).

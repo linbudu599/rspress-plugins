@@ -1,6 +1,6 @@
 # rspress-plugin-vercel-analytics ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-vercel-analytics)
 
-Rspress plugin for [Vercel Analytics](https://vercel.com/docs/analytics).
+Rspress plugin for [Vercel Analytics](https://vercel.com/docs/analytics) integration.
 
 ## Usage
 

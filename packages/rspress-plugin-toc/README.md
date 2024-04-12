@@ -2,6 +2,10 @@
 
 Rspress plugin that injects a table of contents into the page.
 
+<div align="center">
+  <img src="./image.png" alt="sample" width="600" height="380" />
+</div>
+
 ## Compares to built-in Toc component
 
 Rspress provides a built-in [`<Toc />`](https://rspress.dev/zh/api/client-api/api-components.html#table-of-contents) component that can be used to generate a table of contents. So, what are the situations where you would need this plugin?
@@ -50,9 +54,11 @@ import toc from 'rspress-plugin-toc';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
-  plugins: [toc({
-    useOfficialComponent: true,
-  })],
+  plugins: [
+    toc({
+      useOfficialComponent: true,
+    }),
+  ],
 });
 ```
 
@@ -70,9 +76,11 @@ import toc from 'rspress-plugin-toc';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
-  plugins: [toc({
-    tocHeading: '内容导航',
-  })],
+  plugins: [
+    toc({
+      tocHeading: '内容导航',
+    }),
+  ],
 });
 ```
 

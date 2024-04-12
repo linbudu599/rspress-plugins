@@ -5,7 +5,7 @@ Rspress plugin to add superscript(`<super></super>`) and subscript(`<sub></sub>`
 **NOTE: The common subscript syntax `~` conflicts with the delete syntax(`<del></del>`), which is more commonly used, so this plugin uses `_` as the subscript syntax, and you can also modify the superscript and subscript through configuration.**
 
 <div align="center">
-  <img src="./image.png" alt="sample" width="600" height="230" />
+  <img src="./image.png" alt="sample" width="600" height="210" />
 </div>
 
 ## Usage
@@ -33,11 +33,11 @@ export default defineConfig({
 Define the syntax for superscript.
 
 - Type: `string`
-- Default: `^`
+- Default: `^` (matching `^sup^`)
 
 ### subSyntax
 
 Define the syntax for subscript.
 
 - Type: `string`
-- Default: `_`
+- Default: `_` (matching `_sub_`)

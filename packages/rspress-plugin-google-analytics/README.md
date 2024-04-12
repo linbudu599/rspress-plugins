@@ -1,6 +1,6 @@
 # rspress-plugin-google-analytics ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-google-analytics)
 
-Rspress gtag plugin.
+Rspress plugin for [Google Analytics](https://analytics.google.com/) integration.
 
 ## Usage
 

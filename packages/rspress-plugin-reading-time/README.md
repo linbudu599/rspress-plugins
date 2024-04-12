@@ -2,6 +2,8 @@
 
 Rspress plugin to display reading time for your document pages.
 
+![sample](image.png)
+
 ## Usage
 
 ```bash
@@ -41,8 +43,10 @@ import readingTime from 'rspress-plugin-reading-time';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
-  plugins: [readingTime({
-    defaultLocale: 'zh-CN',
-  })],
+  plugins: [
+    readingTime({
+      defaultLocale: 'zh-CN',
+    }),
+  ],
 });
 ```

@@ -16,7 +16,7 @@ flowchart TD
 ````
 
 <div align="center">
-  <img src="./image.png" alt="sample" width="400" height="550" />
+  <img src="./image.png" alt="sample" width="400" height="560" />
 </div>
 
 ## Usage
@@ -52,10 +52,12 @@ import mermaid from 'rspress-plugin-mermaid';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
-  plugins: [mermaid({
-    mermaidConfig: {
-      theme: 'forest',
-    },
-  })],
+  plugins: [
+    mermaid({
+      mermaidConfig: {
+        theme: 'forest',
+      },
+    }),
+  ],
 });
 ```
