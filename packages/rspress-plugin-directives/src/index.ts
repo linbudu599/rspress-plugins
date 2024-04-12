@@ -10,9 +10,12 @@ import {
 import type { RspressPlugin } from '@rspress/shared';
 
 type RspressPluginDirectivesOptions = MaybeArray<
-  RemarkDirectiveTransformer<{
-    componentPath: string;
-  }>
+  RemarkDirectiveTransformer<
+    {},
+    {
+      componentPath: string;
+    }
+  >
 >;
 
 export default function rspressPluginDirectives(

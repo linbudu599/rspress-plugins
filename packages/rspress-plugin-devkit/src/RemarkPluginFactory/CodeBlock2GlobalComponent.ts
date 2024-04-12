@@ -1,4 +1,8 @@
-import { ComponentRegistration, RemarkPluginFactoryBase } from './FactoryBase';
+import {
+  RemarkPluginFactoryBase,
+  type ComponentRegistration,
+} from './FactoryBase';
+
 import { unistVisit } from '../Exports/Unist';
 import { MdxJsxElementFactory } from '../NodeFactory/MdxJsxElementFactory';
 import { getComponentName } from '../Utils/registerComponent';

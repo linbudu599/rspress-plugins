@@ -2,9 +2,7 @@
   "name": "rspress-plugin-reading-time",
   "version": "0.1.0",
   "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
+    "dist"
   ],
   "description": "Rspress plugin to render reading-time for pages.",
   "keywords": [

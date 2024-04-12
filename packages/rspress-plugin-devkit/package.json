@@ -1,6 +1,9 @@
 {
   "name": "rspress-plugin-devkit",
   "version": "0.1.0",
+  "files": [
+    "dist"
+  ],
   "description": "Rspress plugin develop kit.",
   "keywords": [
     "rspress",
@@ -22,8 +25,6 @@
   "scripts": {
     "build": "tsc --declarationMap false",
     "dev": "tsc -w",
-    "docs:build": "rspress build",
-    "docs:dev": "rspress dev",
     "prepublish": "rm -rf dist && npm run build"
   },
   "dependencies": {

@@ -2,9 +2,7 @@
   "name": "rspress-plugin-back-to-top",
   "version": "0.1.0",
   "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
+    "dist"
   ],
   "description": "Rspress plugin that add a back to top button to your site.",
   "keywords": [

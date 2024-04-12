@@ -2,9 +2,7 @@
   "name": "rspress-plugin-google-analytics",
   "version": "0.1.0",
   "files": [
-    "dist",
-    "LICENSE",
-    "README.md"
+    "dist"
   ],
   "description": "rspress plugin for google analytics",
   "keywords": [

@@ -1,10 +1,10 @@
 import { ESTreeNodeFactory } from './ESTreeNodeFactory';
 import { isObject } from '../Utils/is';
+
 import type {
   MdxJsxAttribute,
   MdxJsxExpressionAttribute,
 } from 'mdast-util-mdx-jsx';
-
 import type { Dictionary } from 'util-ts-types';
 
 export class MdxAttrNodeFactory {

@@ -1,7 +1,8 @@
+import { uniqArray } from '../Utils/uniqArray';
+
 import type { RspressPlugin } from '@rspress/shared';
 import type { Content } from 'mdast';
 import type { Dictionary } from 'util-ts-types';
-import { uniqArray } from '../Utils/uniqArray';
 
 type RsbuildConfig = NonNullable<RspressPlugin['builderConfig']>;
 export interface ComponentRegistration<ComponentMetaProvider = void> {

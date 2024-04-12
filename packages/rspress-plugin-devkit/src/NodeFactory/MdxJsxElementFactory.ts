@@ -1,5 +1,3 @@
-import path from 'path';
-
 import { ensureArray } from '../Utils/ensureArray';
 import { ESTreeNodeFactory } from './ESTreeNodeFactory';
 import { MdxAttrNodeFactory } from './MdxAttrNodeFactory';
