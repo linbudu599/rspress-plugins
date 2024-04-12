@@ -20,7 +20,10 @@ const defaultProps = {
 };
 
 type NativeAttrs = Omit<React.HTMLAttributes<any>, keyof Props>;
-export type TreeFileProps = Props & NativeAttrs;
+export type TreeFileProps = Props &
+  NativeAttrs & {
+    parentExpanded: boolean[];
+  };
 
 const TreeFile: React.FC<React.PropsWithChildren<TreeFileProps>> = ({
   name,
@@ -28,6 +31,7 @@ const TreeFile: React.FC<React.PropsWithChildren<TreeFileProps>> = ({
   level,
   extra,
   className,
+  parentExpanded,
   ...props
 }: React.PropsWithChildren<TreeFileProps> & typeof defaultProps) => {
   const { onFileClick } = useTreeContext();

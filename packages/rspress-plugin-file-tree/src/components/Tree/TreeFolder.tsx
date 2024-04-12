@@ -28,7 +28,10 @@ const defaultProps = {
 };
 
 type NativeAttrs = Omit<React.HTMLAttributes<any>, keyof Props>;
-export type TreeFolderProps = Props & NativeAttrs;
+export type TreeFolderProps = Props &
+  NativeAttrs & {
+    parentExpanded: boolean[];
+  };
 
 const TreeFolder: React.FC<React.PropsWithChildren<TreeFolderProps>> = ({
   name,
@@ -37,6 +40,7 @@ const TreeFolder: React.FC<React.PropsWithChildren<TreeFolderProps>> = ({
   level: parentLevel,
   extra,
   className,
+  parentExpanded = [],
   ...props
 }: React.PropsWithChildren<TreeFolderProps> & typeof defaultProps) => {
   const { initialExpand, isImperative } = useTreeContext();
@@ -51,6 +55,7 @@ const TreeFolder: React.FC<React.PropsWithChildren<TreeFolderProps>> = ({
     {
       parentPath: currentPath,
       level: parentLevel + 1,
+      parentExpanded: [...parentExpanded, expanded],
     },
     [TreeFolder, TreeFile],
   );
@@ -81,7 +86,7 @@ const TreeFolder: React.FC<React.PropsWithChildren<TreeFolderProps>> = ({
           )}
         </span>
       </div>
-      <Expand isExpanded={expanded}>
+      <Expand isExpanded={expanded} parentExpanded={parentExpanded}>
         <div
           className={buildClassName('folder-content')}
           onClick={stopPropagation}

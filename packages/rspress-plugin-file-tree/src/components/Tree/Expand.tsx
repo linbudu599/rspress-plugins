@@ -51,6 +51,7 @@ const useRealShape = <T extends HTMLElement>(
 export type ExpandProps = {
   isExpanded?: boolean;
   delay?: number;
+  parentExpanded?: boolean[];
 };
 
 const defaultProps = {
@@ -61,6 +62,7 @@ const defaultProps = {
 const Expand: React.FC<React.PropsWithChildren<ExpandProps>> = ({
   isExpanded,
   delay,
+  parentExpanded = [],
   children,
 }: React.PropsWithChildren<ExpandProps> & typeof defaultProps) => {
   const [height, setHeight] = useState<string>(isExpanded ? 'auto' : '0');
@@ -71,6 +73,8 @@ const Expand: React.FC<React.PropsWithChildren<ExpandProps>> = ({
   const leaveTimer = useRef<number>();
   const resetTimer = useRef<number>();
   const [state, updateShape] = useRealShape<HTMLDivElement>(contentRef);
+
+  const [parentClosed, setParentClosed] = useState<boolean>(false);
 
   useEffect(() => setHeight(`${state.height}px`), [state.height]);
   useEffect(() => {
@@ -110,14 +114,24 @@ const Expand: React.FC<React.PropsWithChildren<ExpandProps>> = ({
     };
   }, [isExpanded]);
 
+  useEffect(() => {
+    const parentClosed = parentExpanded.some((i) => i === false);
+
+    setParentClosed(parentClosed);
+  }, [parentExpanded]);
+
   return (
     <div
-      className={clsx('rspress-file-tree-expand-container', {})}
+      className={clsx('rspress-file-tree-expand-container', {
+        'rspress-file-tree-expand-container-expanded': isExpanded,
+      })}
       style={{
         height: 0,
-        visibility: visible ? 'visible' : 'hidden',
+        visibility: visible && !parentClosed ? 'visible' : 'hidden',
         transition: `height ${delay}ms ease`,
-        ...(selfExpanded ? { height, visibility: 'visible' } : {}),
+        ...(selfExpanded
+          ? { height, visibility: parentClosed ? 'hidden' : 'visible' }
+          : {}),
       }}
     >
       <div
