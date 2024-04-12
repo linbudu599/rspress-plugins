@@ -1,41 +1,38 @@
 # Rspress Plugins
 
-> **UNDER DEVELOPMENT.**
+A collection of plugins to extend the capabilities of [rspress](https://rspress.dev/).
 
-## Develop Plan
+## Plugin List
 
 ### Syntax
 
-- [x] rspress-plugin-supersub
-- [x] rspress-plugin-katex
+- [rspress-plugin-supersub](./packages/rspress-plugin-supersub), superscript and subscript syntax support.
+- [rspress-plugin-katex](./packages/rspress-plugin-katex), render math formulas with KaTeX.
 
 ### Code Transformers
 
-- [x] rspress-plugin-mermaid
-- [x] rspress-plugin-file-tree
+- [rspress-plugin-mermaid](./packages/rspress-plugin-mermaid), render diagrams with Mermaid.
+- [rspress-plugin-file-tree](./packages/rspress-plugin-file-tree), render file tree as a tree view.
 
 ### Extension
 
-- [x] rspress-plugin-directives
-- [x] rspress-plugin-insert-components
+- [rspress-plugin-directives](./packages/rspress-plugin-directives), custom directives support.
 
 ### Themes
 
-- [ ] rspress-theme-geist ([#901](https://github.com/web-infra-dev/rspress/issues/901))
-- [x] rspress-plugin-back-to-top
-- [x] rspress-plugin-live2d
-- [x] rspress-plugin-toc
-- [ ] rspress-plugin-search-page
-- [x] rspress-plugin-reading-time
+- [rspress-plugin-back-to-top](./packages/rspress-plugin-back-to-top), configurable back-to-top button.
+- [rspress-plugin-live2d](./packages/rspress-plugin-live2d), add live2d model to your site.
+- [rspress-plugin-toc](./packages/rspress-plugin-toc), generate table of contents for your pages.
+- [rspress-plugin-reading-time](./packages/rspress-plugin-reading-time), calculate and display reading time for your pages.
 
 ### Site
 
-- [x] rspress-plugin-comment
-- [x] rspress-plugin-google-analytics
-- [x] rspress-plugin-vercel-analytics
+- [rspress-plugin-comment](./packages/rspress-plugin-comment), add comment system to your site.
+- [rspress-plugin-google-analytics](./packages/rspress-plugin-google-analytics), integrate Google Analytics in your site.
+- [rspress-plugin-vercel-analytics](./packages/rspress-plugin-vercel-analytics), integrate Vercel Analytics in your site.
 - [ ] rspress-plugin-sitemap
 - [ ] rspress-plugin-pwa
 
 ### Deploy
 
-- [x] rspress-plugin-gh-pages
+- [rspress-plugin-gh-pages](./packages/rspress-plugin-gh-pages), deploy your site to GitHub Pages without pushing.
