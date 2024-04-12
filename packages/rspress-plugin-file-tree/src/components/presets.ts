@@ -1,5 +1,3 @@
-import clsx from 'clsx';
-
 export const presetClassName = 'rp-file-tree';
 
 export function buildClassName(fragment?: string) {

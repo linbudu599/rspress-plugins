@@ -43,9 +43,14 @@ const TreeFolder: React.FC<React.PropsWithChildren<TreeFolderProps>> = ({
   parentExpanded = [],
   ...props
 }: React.PropsWithChildren<TreeFolderProps> & typeof defaultProps) => {
-  const { initialExpand, isImperative } = useTreeContext();
-  const [expanded, setExpanded] = useState<boolean>(initialExpand);
-  useEffect(() => setExpanded(initialExpand), []);
+  const {
+    initialExpand,
+    isImperative,
+    initialExpandDepth = 0,
+  } = useTreeContext();
+  const [expanded, setExpanded] = useState<boolean>(() => {
+    return parentLevel + 1 <= initialExpandDepth;
+  });
 
   const currentPath = useMemo(() => makeChildPath(name, parentPath), []);
   const clickHandler = () => setExpanded(!expanded);

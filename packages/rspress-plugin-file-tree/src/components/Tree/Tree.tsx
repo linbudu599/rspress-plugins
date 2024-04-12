@@ -24,6 +24,7 @@ interface Props {
   initialExpand?: boolean;
   onClick?: (path: string) => void;
   className?: string;
+  initialExpandDepth?: number;
 }
 
 const defaultProps = {
@@ -67,6 +68,7 @@ const Tree: React.FC<React.PropsWithChildren<TreeProps>> = ({
   children,
   onClick,
   initialExpand,
+  initialExpandDepth,
   tree,
   className,
   ...props
@@ -82,6 +84,7 @@ const Tree: React.FC<React.PropsWithChildren<TreeProps>> = ({
     () => ({
       onFileClick,
       initialExpand,
+      initialExpandDepth,
       isImperative,
     }),
     [initialExpand],

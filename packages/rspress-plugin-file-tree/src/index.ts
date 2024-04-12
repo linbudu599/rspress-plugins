@@ -9,11 +9,15 @@ import { parseInput } from './parser';
 
 import type { RspressPlugin } from '@rspress/shared';
 
-interface RspressPluginFileTreeOptions {}
+interface RspressPluginFileTreeOptions {
+  initialExpandDepth?: number;
+}
 
 export default function rspressPluginFileTree(
   options: RspressPluginFileTreeOptions = {},
 ): RspressPlugin {
+  const { initialExpandDepth = 0 } = options;
+
   const remarkFileTree = new RemarkCodeBlockToGlobalComponentPluginFactory({
     components: [
       {
@@ -25,6 +29,7 @@ export default function rspressPluginFileTree(
         propsProvider(code) {
           return {
             tree: parseInput(code),
+            initialExpandDepth,
           };
         },
       },
