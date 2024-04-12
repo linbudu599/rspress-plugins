@@ -19,7 +19,7 @@ import alignImage from 'rspress-plugin-align-image';
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
   plugins: [
-    alignImage({}),
+    alignImage(),
   ],
 });
 ```
@@ -42,7 +42,7 @@ Addtional class names to add to the container div element.
 ```ts
 import * as path from 'path';
 import { defineConfig } from 'rspress/config';
-import alignImage from './src';
+import alignImage from 'rspress-plugin-align-image';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
