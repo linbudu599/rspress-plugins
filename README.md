@@ -8,7 +8,6 @@
 
 - [x] rspress-plugin-supersub
 - [x] rspress-plugin-katex
-- [ ] rspress-plugin-obsidian
 
 ### Code Transformers
 

@@ -1,1 +1,0 @@
-# rspress-plugin-obsidian

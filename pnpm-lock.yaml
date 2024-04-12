@@ -88,6 +88,25 @@ importers:
         specifier: ^16.18.95
         version: 16.18.95
 
+  packages/rspress-plugin-align-image:
+    dependencies:
+      '@rspress/shared':
+        specifier: ^1.17.1
+        version: 1.17.1
+      rspress:
+        specifier: '*'
+        version: 1.17.1(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../rspress-plugin-devkit
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.5
+        version: 20.12.5
+      typescript:
+        specifier: ^5.4.4
+        version: 5.4.4
+
   packages/rspress-plugin-back-to-top:
     dependencies:
       '@rspress/shared':
@@ -199,8 +218,8 @@ importers:
         specifier: ^1.0.5
         version: 1.0.5
       '@types/hast':
-        specifier: ^3.0.4
-        version: 3.0.4
+        specifier: ^2.3.4
+        version: 2.3.4
       '@types/mdast':
         specifier: ^3.0.15
         version: 3.0.15
@@ -462,34 +481,6 @@ importers:
       '@types/react':
         specifier: ^18.2.74
         version: 18.2.74
-      typescript:
-        specifier: ^5.4.4
-        version: 5.4.4
-
-  packages/rspress-plugin-obsidian:
-    dependencies:
-      '@rspress/shared':
-        specifier: ^1.17.1
-        version: 1.17.1
-      rspress:
-        specifier: '*'
-        version: 1.17.1(webpack@5.91.0)
-      rspress-plugin-devkit:
-        specifier: workspace:^
-        version: link:../rspress-plugin-devkit
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.5
-        version: 20.12.5
-      '@types/react':
-        specifier: ^18.2.74
-        version: 18.2.74
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
       typescript:
         specifier: ^5.4.4
         version: 5.4.4
@@ -2579,6 +2570,12 @@ packages:
     resolution: {integrity: sha512-McWspRw8xx8J9HurkVBfYj0xKoE25tOFlHGdx4MJ5xORQrMGZNqJhVQWaIbm6Oyla5kYOXtDiopzKRJzEOkwJw==}
     dependencies:
       '@types/unist': 2.0.10
+    dev: false
+
+  /@types/hast@2.3.4:
+    resolution: {integrity: sha512-wLEm0QvaoawEDoTRwzTXp4b4jpwiJDvR5KMnFnVodm3scufTlBOWRD6N1OBf9TZMhjlNsSfcO5V+7AF4+Vy+9g==}
+    dependencies:
+      '@types/unist': 3.0.2
     dev: false
 
   /@types/hast@3.0.4:

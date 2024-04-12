@@ -1,0 +1,46 @@
+{
+  "name": "rspress-plugin-align-image",
+  "version": "0.1.0",
+  "description": "Rspress plugin for aligning images",
+  "keywords": [
+    "rspress",
+    "plugin",
+    "align",
+    "image"
+  ],
+  "homepage": "https://github.com/linbudu599/rspress-plugins/tree/main/packages/rspress-plugin-align-image#readme",
+  "bugs": {
+    "url": "https://github.com/linbudu599/rspress-plugins/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linbudu599/rspress-plugins.git"
+  },
+  "license": "MIT",
+  "author": "Linbudu <linbudu599@gmail.com> (https://github.com/linbudu599)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc --declarationMap false",
+    "dev": "tsc -w",
+    "docs:build": "rspress build",
+    "docs:dev": "rspress dev",
+    "prepublish": "rm -rf dist && npm run build"
+  },
+  "dependencies": {
+    "@rspress/shared": "^1.17.1",
+    "rspress-plugin-devkit": "workspace:^"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.5",
+    "typescript": "^5.4.4"
+  },
+  "peerDependencies": {
+    "rspress": "*"
+  }
+}
