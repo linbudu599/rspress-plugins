@@ -14,7 +14,7 @@
     "test": "vitest",
     "testu": "vitest --update",
     "test:cov": "vitest --coverage",
-    "version": "changeset version && pnpm install --frozen-lockfile",
+    "version": "changeset version && pnpm install --frozen-lockfile false",
     "release": "changeset publish",
     "release:beta": "changeset pre enter beta && pnpm run version && pnpm build && pnpm release && changeset pre exit"
   },
