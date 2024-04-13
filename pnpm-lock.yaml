@@ -78,16 +78,6 @@ importers:
         specifier: 1.4.0
         version: 1.4.0
 
-  packages/rspress-app:
-    dependencies:
-      rspress:
-        specifier: ^1.17.1
-        version: 1.17.1(webpack@5.91.0)
-    devDependencies:
-      '@types/node':
-        specifier: ^16.18.95
-        version: 16.18.95
-
   packages/rspress-plugin-align-image:
     dependencies:
       '@rspress/shared':
@@ -131,74 +121,6 @@ importers:
       '@types/throttle-debounce':
         specifier: ^5.0.2
         version: 5.0.2
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      typescript:
-        specifier: ^5.4.4
-        version: 5.4.4
-
-  packages/rspress-plugin-comment:
-    dependencies:
-      '@giscus/react':
-        specifier: ^3.0.0
-        version: 3.0.0(react-dom@18.2.0)(react@18.2.0)
-      '@rspress/shared':
-        specifier: ^1.17.1
-        version: 1.17.1
-      rspress:
-        specifier: '*'
-        version: 1.17.1(webpack@5.91.0)
-      rspress-plugin-devkit:
-        specifier: workspace:^
-        version: link:../rspress-plugin-devkit
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.5
-        version: 20.12.5
-      '@types/react':
-        specifier: ^18.2.74
-        version: 18.2.74
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      typescript:
-        specifier: ^5.4.4
-        version: 5.4.4
-
-  packages/rspress-plugin-contentful:
-    dependencies:
-      '@rspress/shared':
-        specifier: ^1.17.1
-        version: 1.17.1
-      contentful:
-        specifier: ^10.8.7
-        version: 10.8.7
-      contentful-management:
-        specifier: ^11.24.3
-        version: 11.24.3
-      dotenv:
-        specifier: ^16.4.5
-        version: 16.4.5
-      rspress:
-        specifier: '*'
-        version: 1.17.1(webpack@5.91.0)
-      rspress-plugin-devkit:
-        specifier: workspace:^
-        version: link:../rspress-plugin-devkit
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.5
-        version: 20.12.5
-      '@types/react':
-        specifier: ^18.2.74
-        version: 18.2.74
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -370,43 +292,6 @@ importers:
         specifier: ^5.4.4
         version: 5.4.4
 
-  packages/rspress-plugin-graphql-playground:
-    dependencies:
-      '@geist-ui/core':
-        specifier: ^2.3.8
-        version: 2.3.8(react-dom@18.2.0)(react@18.2.0)
-      '@rspress/shared':
-        specifier: ^1.17.1
-        version: 1.17.1
-      graphql-playground-react:
-        specifier: ^1.7.28
-        version: 1.7.28(@babel/core@7.24.4)(@types/node@20.12.5)
-      react-redux:
-        specifier: ^9.1.0
-        version: 9.1.0(@types/react@18.2.74)(react@18.2.0)
-      rspress:
-        specifier: '*'
-        version: 1.17.1(webpack@5.91.0)
-      rspress-plugin-devkit:
-        specifier: workspace:^
-        version: link:../rspress-plugin-devkit
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.5
-        version: 20.12.5
-      '@types/react':
-        specifier: ^18.2.74
-        version: 18.2.74
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      typescript:
-        specifier: ^5.4.4
-        version: 5.4.4
-
   packages/rspress-plugin-katex:
     dependencies:
       '@rspress/shared':
@@ -485,31 +370,6 @@ importers:
         specifier: ^5.4.4
         version: 5.4.4
 
-  packages/rspress-plugin-pwa:
-    dependencies:
-      '@rspress/shared':
-        specifier: ^1.17.1
-        version: 1.17.1
-      mermaid:
-        specifier: ^10.9.0
-        version: 10.9.0
-      rspress:
-        specifier: '*'
-        version: 1.17.1(webpack@5.91.0)
-      rspress-plugin-devkit:
-        specifier: workspace:^
-        version: link:../rspress-plugin-devkit
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.5
-        version: 20.12.5
-      '@types/react':
-        specifier: ^18.2.74
-        version: 18.2.74
-      typescript:
-        specifier: ^5.4.4
-        version: 5.4.4
-
   packages/rspress-plugin-reading-time:
     dependencies:
       '@rspress/shared':
@@ -518,59 +378,6 @@ importers:
       reading-time:
         specifier: ^1.5.0
         version: 1.5.0
-      rspress:
-        specifier: '*'
-        version: 1.17.1(webpack@5.91.0)
-      rspress-plugin-devkit:
-        specifier: workspace:^
-        version: link:../rspress-plugin-devkit
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.5
-        version: 20.12.5
-      '@types/react':
-        specifier: ^18.2.74
-        version: 18.2.74
-      typescript:
-        specifier: ^5.4.4
-        version: 5.4.4
-
-  packages/rspress-plugin-search-page:
-    dependencies:
-      '@rspress/shared':
-        specifier: ^1.17.1
-        version: 1.17.1
-      rspress:
-        specifier: '*'
-        version: 1.17.1(webpack@5.91.0)
-      rspress-plugin-devkit:
-        specifier: workspace:^
-        version: link:../rspress-plugin-devkit
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.5
-        version: 20.12.5
-      '@types/react':
-        specifier: ^18.2.74
-        version: 18.2.74
-      react:
-        specifier: ^18.2.0
-        version: 18.2.0
-      react-dom:
-        specifier: ^18.2.0
-        version: 18.2.0(react@18.2.0)
-      typescript:
-        specifier: ^5.4.4
-        version: 5.4.4
-
-  packages/rspress-plugin-sitemap:
-    dependencies:
-      '@rspress/shared':
-        specifier: ^1.17.1
-        version: 1.17.1
-      mermaid:
-        specifier: ^10.9.0
-        version: 10.9.0
       rspress:
         specifier: '*'
         version: 1.17.1(webpack@5.91.0)
@@ -678,7 +485,147 @@ importers:
         specifier: ^5.4.4
         version: 5.4.4
 
-  packages/rspress-theme-geist:
+  wip-packages/rspress-app:
+    dependencies:
+      rspress:
+        specifier: ^1.17.1
+        version: 1.17.1(webpack@5.91.0)
+    devDependencies:
+      '@types/node':
+        specifier: ^16.18.95
+        version: 16.18.95
+
+  wip-packages/rspress-plugin-comment:
+    dependencies:
+      '@giscus/react':
+        specifier: ^3.0.0
+        version: 3.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@rspress/shared':
+        specifier: ^1.17.1
+        version: 1.17.1
+      rspress:
+        specifier: '*'
+        version: 1.17.1(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../../packages/rspress-plugin-devkit
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.5
+        version: 20.12.5
+      '@types/react':
+        specifier: ^18.2.74
+        version: 18.2.74
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      typescript:
+        specifier: ^5.4.4
+        version: 5.4.4
+
+  wip-packages/rspress-plugin-contentful:
+    dependencies:
+      '@rspress/shared':
+        specifier: ^1.17.1
+        version: 1.17.1
+      contentful:
+        specifier: ^10.8.7
+        version: 10.8.7
+      contentful-management:
+        specifier: ^11.24.3
+        version: 11.24.3
+      dotenv:
+        specifier: ^16.4.5
+        version: 16.4.5
+      rspress:
+        specifier: '*'
+        version: 1.17.1(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../../packages/rspress-plugin-devkit
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.5
+        version: 20.12.5
+      '@types/react':
+        specifier: ^18.2.74
+        version: 18.2.74
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      typescript:
+        specifier: ^5.4.4
+        version: 5.4.4
+
+  wip-packages/rspress-plugin-graphql-playground:
+    dependencies:
+      '@geist-ui/core':
+        specifier: ^2.3.8
+        version: 2.3.8(react-dom@18.2.0)(react@18.2.0)
+      '@rspress/shared':
+        specifier: ^1.17.1
+        version: 1.17.1
+      graphql-playground-react:
+        specifier: ^1.7.28
+        version: 1.7.28(@babel/core@7.24.4)(@types/node@20.12.5)
+      react-redux:
+        specifier: ^9.1.0
+        version: 9.1.0(@types/react@18.2.74)(react@18.2.0)
+      rspress:
+        specifier: '*'
+        version: 1.17.1(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../../packages/rspress-plugin-devkit
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.5
+        version: 20.12.5
+      '@types/react':
+        specifier: ^18.2.74
+        version: 18.2.74
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      typescript:
+        specifier: ^5.4.4
+        version: 5.4.4
+
+  wip-packages/rspress-plugin-pwa:
+    dependencies:
+      '@rspress/shared':
+        specifier: ^1.17.1
+        version: 1.17.1
+      mermaid:
+        specifier: ^10.9.0
+        version: 10.9.0
+      rspress:
+        specifier: '*'
+        version: 1.17.1(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../../packages/rspress-plugin-devkit
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.5
+        version: 20.12.5
+      '@types/react':
+        specifier: ^18.2.74
+        version: 18.2.74
+      typescript:
+        specifier: ^5.4.4
+        version: 5.4.4
+
+  wip-packages/rspress-plugin-search-page:
     dependencies:
       '@rspress/shared':
         specifier: ^1.17.1
@@ -688,7 +635,60 @@ importers:
         version: 1.17.1(webpack@5.91.0)
       rspress-plugin-devkit:
         specifier: workspace:^
-        version: link:../rspress-plugin-devkit
+        version: link:../../packages/rspress-plugin-devkit
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.5
+        version: 20.12.5
+      '@types/react':
+        specifier: ^18.2.74
+        version: 18.2.74
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      typescript:
+        specifier: ^5.4.4
+        version: 5.4.4
+
+  wip-packages/rspress-plugin-sitemap:
+    dependencies:
+      '@rspress/shared':
+        specifier: ^1.17.1
+        version: 1.17.1
+      mermaid:
+        specifier: ^10.9.0
+        version: 10.9.0
+      rspress:
+        specifier: '*'
+        version: 1.17.1(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../../packages/rspress-plugin-devkit
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.5
+        version: 20.12.5
+      '@types/react':
+        specifier: ^18.2.74
+        version: 18.2.74
+      typescript:
+        specifier: ^5.4.4
+        version: 5.4.4
+
+  wip-packages/rspress-theme-geist:
+    dependencies:
+      '@rspress/shared':
+        specifier: ^1.17.1
+        version: 1.17.1
+      rspress:
+        specifier: '*'
+        version: 1.17.1(webpack@5.91.0)
+      rspress-plugin-devkit:
+        specifier: workspace:^
+        version: link:../../packages/rspress-plugin-devkit
     devDependencies:
       '@types/node':
         specifier: ^20.12.5
