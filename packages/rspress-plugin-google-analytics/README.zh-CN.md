@@ -1,10 +1,8 @@
 # rspress-plugin-google-analytics ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-google-analytics)
 
-[简体中文](./README.zh-CN.md)
+为 Rspress 集成 [Google Analytics](https://analytics.google.com/)。
 
-Rspress plugin for [Google Analytics](https://analytics.google.com/) integration.
-
-## Usage
+## 使用
 
 ```bash
 npm i rspress-plugin-google-analytics
@@ -26,18 +24,18 @@ export default defineConfig({
 });
 ```
 
-## Configure
+## 配置
 
 ### id
 
-Google Analytics tracking ID.
+Google Analytics 的跟踪 ID。
 
 - Type: `string | string[]`
 - Required
 
 ### anonymizeIp
 
-[Anonymize IP](https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization) addresses for Google Analytics.
+启用 [匿名 IP 地址](https://developers.google.com/analytics/devguides/collection/gtagjs/ip-anonymization)。
 
 - Type: `boolean`
 - Default: `false`

@@ -1,10 +1,8 @@
 # rspress-plugin-vercel-analytics ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-vercel-analytics)
 
-[简体中文](./README.zh-CN.md)
+为 Rspress 集成 [Vercel Analytics](https://vercel.com/docs/analytics).
 
-Rspress plugin for [Vercel Analytics](https://vercel.com/docs/analytics) integration.
-
-## Usage
+## 使用
 
 ```bash
 npm i rspress-plugin-vercel-analytics
@@ -22,6 +20,6 @@ export default defineConfig({
 });
 ```
 
-## Configure
+## 配置
 
-See [Vercel Analytics](https://vercel.com/docs/analytics/package) for more details.
+查看 [Vercel Analytics](https://vercel.com/docs/analytics/package) 获取详细信息。
