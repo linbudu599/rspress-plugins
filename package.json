@@ -15,8 +15,9 @@
     "testu": "vitest --update",
     "test:cov": "vitest --coverage",
     "version": "changeset version && pnpm install --frozen-lockfile",
-    "release": "changeset publish",
-    "release:beta": "changeset pre enter beta && pnpm run version && pnpm build && pnpm release && changeset pre exit"
+    "version:beta": "changeset pre enter beta && changeset version",
+    "release": "pnpm build && changeset publish",
+    "release:beta": "pnpm build && changeset publish --tag && changeset pre exit"
   },
   "config": {
     "commitizen": {

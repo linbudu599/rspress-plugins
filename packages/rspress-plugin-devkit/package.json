@@ -27,8 +27,7 @@
   },
   "scripts": {
     "build": "tsc --declarationMap false",
-    "dev": "tsc -w",
-    "prepublish": "rm -rf dist && npm run build"
+    "dev": "tsc -w"
   },
   "dependencies": {
     "@rspress/shared": "^1.17.1",
