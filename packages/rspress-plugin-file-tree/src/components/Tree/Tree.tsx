@@ -50,6 +50,7 @@ const makeChildren = (value: Array<TreeFile> = []) => {
             name={item.name}
             extra={item.extra}
             key={`folder-${item.name}-${index}`}
+            parentExpanded={[]}
           >
             {makeChildren(item.files)}
           </TreeFolder>
@@ -59,6 +60,7 @@ const makeChildren = (value: Array<TreeFile> = []) => {
           name={item.name}
           extra={item.extra}
           key={`file-${item.name}-${index}`}
+          parentExpanded={[]}
         />
       );
     });
