@@ -1,12 +1,10 @@
 # rspress-plugin-reading-time ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-reading-time)
 
-[简体中文](./README.zh-CN.md)
-
-Rspress plugin to display reading time for your document pages.
+在你的文档页面中显示阅读时间的 Rspress 插件。
 
 ![sample](image.png)
 
-## Usage
+## 使用
 
 ```bash
 npm i rspress-plugin-reading-time
@@ -24,17 +22,17 @@ export default defineConfig({
 });
 ```
 
-## Configure
+## 配置
 
 ### getReadingTime
 
-Function to calculate estimated reading time, by default it uses [reading-time](https://www.npmjs.com/package/reading-time) package for estimation.
+用于计算预估阅读时间的函数，默认使用 [reading-time](https://www.npmjs.com/package/reading-time) 包进行估算。
 
 - Type: `(content: string) => ReadTimeResults`
 
 ### defaultLocale
 
-Default locale for reading time, by default it uses `en-US`.
+在站点未设置 locales 时，用于阅读时间文本的默认语言，默认使用 `en-US`。
 
 - Type: `string`
 

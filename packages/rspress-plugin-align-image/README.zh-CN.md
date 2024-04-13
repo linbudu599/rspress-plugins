@@ -1,12 +1,10 @@
 # rspress-plugin-align-image ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-align-image)
 
-[简体中文](./README.zh-CN.md)
+让 Markdown 中图片自动居中的 Rspress 插件。
 
-Rspress plugin to align images in markdown.
+此插件通过将生成 HTML 中的图片元素放置在一个 `flex` + `justify: center` 的 div 元素中来实现。
 
-This plugin works by wrapping images in a div element with classes that aligns the image.
-
-## Usage
+## 使用
 
 ```bash
 npm i rspress-plugin-align-image
@@ -24,18 +22,18 @@ export default defineConfig({
 });
 ```
 
-## Configure
+## 配置
 
 ### justify
 
-Align the image to the left, right or center.
+配置图片的对齐方式，支持 `left`、`right` 和 `center`。
 
 - Type: `'left' | 'right' | 'center'`
 - Default: `'center'`
 
 ### containerClassNames
 
-Addtional class names to add to the container div element.
+额外添加到容器 div 元素的类名。
 
 - Type: `string[]`
 
@@ -55,7 +53,7 @@ export default defineConfig({
 });
 ```
 
-The configuration above will align the image to the left and add the class `my-class` to the container div element:
+以上的配置将生成如下的 HTML 结构：
 
 ```html
 <div class="my-4 flex flex-row justify-start my-class">

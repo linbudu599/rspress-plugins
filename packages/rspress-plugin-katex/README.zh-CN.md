@@ -1,8 +1,6 @@
 # rspress-plugin-katex ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-katex)
 
-[简体中文](./README.zh-CN.md)
-
-Rspress plugin to add support for rendering math equations using [KaTeX](https://katex.org/).
+为 Rspress 支持基于 [KaTeX](https://katex.org/) 渲染的数学公式支持。
 
 ````markdown
 ```math
@@ -34,7 +32,7 @@ export default defineConfig({
   <img src="./image.png" alt="sample" width="400" height="150" />
 </div>
 
-## Usage
+## 使用
 
 ```bash
 npm i rspress-plugin-katex
@@ -52,6 +50,6 @@ export default defineConfig({
 });
 ```
 
-## Configure
+## 配置
 
-See [KaTeX documentation](https://katex.org/docs/options.html) for more details.
+查看 [KaTeX documentation](https://katex.org/docs/options.html) 了解更多细节。

@@ -1,5 +1,7 @@
 # rspress-plugin-gh-pages ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-gh-pages)
 
+[简体中文](./README.zh-CN.md)
+
 Rspress plugin to add support for automatic deployment to GitHub Pages.
 
 - **No need to push the code and wait for the pages to be updated**: Every time you run `rspress build`, the plugin will automatically push the generated files to the specified `gh-pages` branch of the repository

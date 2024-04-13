@@ -1,5 +1,7 @@
 # rspress-plugin-toc ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-toc)
 
+[简体中文](./README.zh-CN.md)
+
 Rspress plugin that injects a table of contents into the page.
 
 <div align="center">
@@ -10,9 +12,9 @@ Rspress plugin that injects a table of contents into the page.
 
 Rspress provides a built-in [`<Toc />`](https://rspress.dev/zh/api/client-api/api-components.html#table-of-contents) component that can be used to generate a table of contents. So, what are the situations where you would need this plugin?
 
+- ✅ You want to be able to set the max depth of the headings that present in the Toc component → See [maxDepth](#maxdepth).
 - ✅ You want to automatically insert the Toc component for every page, instead of importing it manually → See [useOfficialComponent](#useofficialcomponent).
 - ✅ You want to inject the Toc component with a toc heading(like `## Table of Contents`) → See [tocHeading](#tocheading).
-- ✅ You want to be able to set the max depth of the headings that present in the Toc component → See [maxDepth](#maxdepth).
 
 **The Toc component inserted by this plugin exactly replicates the style of the rspress built-in Toc component.**(Huge thanks to the rspress team for creating such a beautiful component!)
 

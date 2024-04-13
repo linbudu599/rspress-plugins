@@ -2,9 +2,9 @@
 
 [简体中文](./README.zh-CN.md)
 
-Rspress plugin that add file tree view support.
+用于展示文件树的 Rspress 插件。
 
-Write tree view using code block with language `tree`:
+使用 `tree` 语言的代码块来书写树形结构：
 
 ````markdown
 ```tree
@@ -33,7 +33,7 @@ Write tree view using code block with language `tree`:
 ```
 ````
 
-And it will be rendered as:
+它将被渲染为：
 
 <div align="center">
   <img src="./image.png" alt="sample" width="400" height="300" />
@@ -41,9 +41,9 @@ And it will be rendered as:
 
 > [!NOTE]
 >
-> **The renderer component was forked from [Geist UI](https://geist-ui.dev/) which created by [witt](https://github.com/unix), huge thanks to his great work!**
+> **最终渲染的组件 fork 自 [witt](https://github.com/unix) 的 [Geist UI](https://geist-ui.dev/), 感谢他的贡献。**
 
-## Usage
+## 使用
 
 ```bash
 npm i rspress-plugin-file-tree
@@ -61,11 +61,11 @@ export default defineConfig({
 });
 ```
 
-## Configure
+## 配置
 
 ## initialExpandDepth
 
-Initial expand depth of the tree view.
+配置文件树的初始展开深度。
 
 - Type: `number`
 - Default: `0`

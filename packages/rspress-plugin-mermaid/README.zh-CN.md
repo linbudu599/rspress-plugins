@@ -1,10 +1,8 @@
 # rspress-plugin-mermaid ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-mermaid)
 
-[简体中文](./README.zh-CN.md)
+为 Rspress 支持基于 [Mermaid](hhttps://mermaid.js.org/#/) 的流程图、时序图等图表。
 
-Rspress plugin to render mermaid diagrams in markdown files.
-
-Write mermaid as code blocks in markdown files and they will be rendered as SVGs:
+编写 Mermaid 图表时，只需使用 `mermaid` 代码块，插件会自动将其转换为 SVG。
 
 ````markdown
 ```mermaid
@@ -21,7 +19,7 @@ flowchart TD
   <img src="./image.png" alt="sample" width="400" height="560" />
 </div>
 
-## Usage
+## 使用
 
 ```bash
 npm i rspress-plugin-mermaid
@@ -39,11 +37,11 @@ export default defineConfig({
 });
 ```
 
-## Configure
+## 配置
 
 ### mermaidConfig
 
-Mermaid configuration options, will be passed to `mermaid.initialize` function. See [mermaid documentation](https://mermaid.js.org/config/schema-docs/config.html) for more details.
+Mermaid 配置选项，将传递给 `mermaid.initialize` 函数。查看 [mermaid 文档](https://mermaid.js.org/config/schema-docs/config.html) 了解更多细节。
 
 - Type: `object`
 
