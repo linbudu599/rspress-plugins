@@ -1,6 +1,6 @@
 {
   "name": "rspress-plugin-align-image",
-  "version": "0.1.1-beta.0",
+  "version": "0.1.1",
   "description": "Rspress plugin for aligning images",
   "keywords": [
     "rspress",
@@ -20,6 +20,9 @@
   "author": "Linbudu <linbudu599@gmail.com> (https://github.com/linbudu599)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "files": [
     "dist"
   ],
