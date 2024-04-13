@@ -33,7 +33,7 @@ jobs:
       - name: Create Release Pull Request
         uses: changesets/action@v1
         with:
-          version: pnpm run version
+          version: pnpm run version:beta
           commit: 'release: update versions'
           title: 'release: update versions'
           setupGitUser: true
