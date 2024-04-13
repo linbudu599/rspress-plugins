@@ -13,7 +13,10 @@
     "packages:build:p": "pnpm --parallel --filter=./packages/**/* run build",
     "test": "vitest",
     "testu": "vitest --update",
-    "test:cov": "vitest --coverage"
+    "test:cov": "vitest --coverage",
+    "version": "changeset version && pnpm install --frozen-lockfile",
+    "release": "changeset publish",
+    "release:beta": "changeset pre enter beta && pnpm run version && pnpm build && pnpm release && changeset pre exit"
   },
   "config": {
     "commitizen": {

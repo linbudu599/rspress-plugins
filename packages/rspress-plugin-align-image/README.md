@@ -2,7 +2,7 @@
 
 Rspress plugin to align images in markdown.
 
-This plugin works by wrapping images in a div element with a class that aligns the image.
+This plugin works by wrapping images in a div element with classes that aligns the image.
 
 ## Usage
 
@@ -18,9 +18,7 @@ import alignImage from 'rspress-plugin-align-image';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
-  plugins: [
-    alignImage(),
-  ],
+  plugins: [alignImage()],
 });
 ```
 
