@@ -1,5 +1,12 @@
 # rspress-plugin-toc
 
+## 0.1.4-beta.1
+
+### Patch Changes
+
+- 7f22c6a: fixup package output
+- 7d333e1: fixup
+
 ## 0.1.4-beta.0
 
 ### Patch Changes
