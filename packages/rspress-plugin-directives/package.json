@@ -1,6 +1,6 @@
 {
   "name": "rspress-plugin-directives",
-  "version": "0.1.2-beta.0",
+  "version": "0.1.2",
   "description": "Rspress plugin for custom directives transformation.",
   "keywords": [
     "rspress",

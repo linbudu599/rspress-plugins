@@ -1,5 +1,12 @@
 # rspress-plugin-google-analytics
 
+## 0.1.2
+
+### Patch Changes
+
+- Updated dependencies [932dbb7]
+  - rspress-plugin-devkit@0.1.2
+
 ## 0.1.2-beta.0
 
 ### Patch Changes

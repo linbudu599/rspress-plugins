@@ -1,6 +1,6 @@
 {
   "name": "rspress-plugin-katex",
-  "version": "0.1.2-beta.0",
+  "version": "0.1.2",
   "description": "Rspress plugin to render math with KaTeX",
   "keywords": [
     "rspress",

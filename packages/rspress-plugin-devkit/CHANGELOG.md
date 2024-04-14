@@ -1,5 +1,11 @@
 # rspress-plugin-devkit
 
+## 0.1.2
+
+### Patch Changes
+
+- 932dbb7: compat component path
+
 ## 0.1.2-beta.0
 
 ### Patch Changes

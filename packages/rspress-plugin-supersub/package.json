@@ -1,6 +1,6 @@
 {
   "name": "rspress-plugin-supersub",
-  "version": "0.1.2-beta.0",
+  "version": "0.1.2",
   "description": "Rspress plugin that add support for superscript and subscript",
   "keywords": [
     "rspress",
