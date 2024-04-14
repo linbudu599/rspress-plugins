@@ -1,6 +1,6 @@
 {
   "name": "rspress-plugin-live2d",
-  "version": "0.1.4",
+  "version": "0.2.0",
   "description": "Rspress plugin with live 2d.",
   "files": [
     "dist",
