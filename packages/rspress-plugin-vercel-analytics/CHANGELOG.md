@@ -1,5 +1,12 @@
 # rspress-plugin-vercel-analytics
 
+## 0.1.4
+
+### Patch Changes
+
+- Updated dependencies [2891f27]
+  - rspress-plugin-devkit@0.1.3
+
 ## 0.1.4-beta.0
 
 ### Patch Changes

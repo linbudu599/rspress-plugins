@@ -1,5 +1,12 @@
 # rspress-plugin-gh-pages
 
+## 0.1.6
+
+### Patch Changes
+
+- Updated dependencies [2891f27]
+  - rspress-plugin-devkit@0.1.3
+
 ## 0.1.6-beta.0
 
 ### Patch Changes
