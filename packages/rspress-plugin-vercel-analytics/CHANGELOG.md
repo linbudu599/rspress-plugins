@@ -1,5 +1,11 @@
 # rspress-plugin-vercel-analytics
 
+## 0.1.5-beta.0
+
+### Patch Changes
+
+- 33488ea: fixup package output
+
 ## 0.1.4
 
 ### Patch Changes

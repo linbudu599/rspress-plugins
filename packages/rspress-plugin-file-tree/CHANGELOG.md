@@ -1,5 +1,11 @@
 # rspress-plugin-file-tree
 
+## 0.1.4-beta.1
+
+### Patch Changes
+
+- 33488ea: fixup package output
+
 ## 0.1.4-beta.0
 
 ### Patch Changes

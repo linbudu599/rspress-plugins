@@ -1,7 +1,11 @@
 {
   "name": "rspress-plugin-live2d",
-  "version": "0.1.3",
-  "description": "Rspress plugin for file tree component.",
+  "version": "0.1.4-beta.0",
+  "description": "Rspress plugin with live 2d.",
+  "files": [
+    "dist",
+    "components"
+  ],
   "keywords": [
     "rspress",
     "plugin",

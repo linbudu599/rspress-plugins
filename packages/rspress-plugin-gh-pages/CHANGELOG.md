@@ -1,5 +1,11 @@
 # rspress-plugin-gh-pages
 
+## 0.1.7-beta.0
+
+### Patch Changes
+
+- 33488ea: fixup package output
+
 ## 0.1.6
 
 ### Patch Changes

@@ -1,8 +1,9 @@
 {
   "name": "rspress-plugin-reading-time",
-  "version": "0.1.3",
+  "version": "0.1.4-beta.0",
   "files": [
-    "dist"
+    "dist",
+    "components"
   ],
   "description": "Rspress plugin to render reading-time for pages.",
   "keywords": [

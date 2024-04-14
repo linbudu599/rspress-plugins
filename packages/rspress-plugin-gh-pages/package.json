@@ -1,6 +1,9 @@
 {
   "name": "rspress-plugin-gh-pages",
-  "version": "0.1.6",
+  "version": "0.1.7-beta.0",
+  "files": [
+    "dist"
+  ],
   "description": "Rspress plugin that add support for automatic deployment to GitHub Pages",
   "keywords": [
     "rspress",
