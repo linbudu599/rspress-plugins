@@ -1,5 +1,12 @@
 # rspress-plugin-katex
 
+## 0.1.2-beta.0
+
+### Patch Changes
+
+- Updated dependencies [932dbb7]
+  - rspress-plugin-devkit@0.1.2-beta.0
+
 ## 0.1.1
 
 ### Patch Changes
