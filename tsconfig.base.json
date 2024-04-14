@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2018",
     "module": "ESNext",
-    "jsx": "react-jsx",
+    "jsx": "preserve",
     "declaration": true,
     "lib": ["es2022", "esnext", "dom"],
     "sourceMap": false,

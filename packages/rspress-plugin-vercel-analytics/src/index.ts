@@ -1,7 +1,7 @@
 import path from 'node:path';
 
 import type { RspressPlugin } from '@rspress/shared';
-import type { VercelAnalyticsProps } from './VercelAnalytics';
+import type { VercelAnalyticsProps } from './typings';
 
 interface RspressPluginVercelAnalyticsOptions extends VercelAnalyticsProps {}
 
@@ -15,7 +15,7 @@ export default function rspressPluginVercelAnalytics(
     },
     globalUIComponents: [
       [
-        path.join(__dirname, 'VercelAnalytics.tsx'),
+        path.join(__dirname, '../components/VercelAnalytics.tsx'),
         {
           mode:
             process.env.NODE_ENV === 'production'

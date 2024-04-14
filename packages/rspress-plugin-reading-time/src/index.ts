@@ -23,7 +23,7 @@ export default function rspressPluginReadingTime(
     components: [
       {
         position: 'after-first-heading',
-        componentPath: path.join(__dirname, 'components', './ReadingTime.tsx'),
+        componentPath: path.join(__dirname, '../components/ReadingTime.tsx'),
         propsProvider: () => ({
           defaultLocale,
         }),

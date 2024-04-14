@@ -7,7 +7,7 @@ import {
 
 import type { RspressPlugin } from '@rspress/shared';
 import type { MermaidConfig } from 'mermaid';
-import type { MermaidRendererProps } from './components/MermaidRender';
+import type { MermaidRendererProps } from './typings';
 
 interface RspressPluginMermaidOptions {
   mermaidConfig?: MermaidConfig;
@@ -22,7 +22,11 @@ export default function rspressPluginMermaid(
     components: [
       {
         lang: 'mermaid',
-        componentPath: path.join(__dirname, './components/MermaidRender.tsx'),
+        componentPath: path.join(
+          __dirname,
+          '../components',
+          'MermaidRender.tsx',
+        ),
         childrenProvider() {
           return [];
         },

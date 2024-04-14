@@ -14,6 +14,8 @@ export interface RspressPluginTocOptions extends TocOptions {}
 export default function rspressPluginToc(
   options: RspressPluginTocOptions = {},
 ): RspressPlugin {
+  const { useOfficialComponent = false } = options;
+
   return {
     name: 'rspress-plugin-toc',
     config(config) {
@@ -23,10 +25,9 @@ export default function rspressPluginToc(
       remarkPlugins: [
         [remarkTocPluginFactory(), options satisfies RemarkTocOptions],
       ],
-      globalComponents:
-        options.useOfficialComponent === false
-          ? [path.join(__dirname, './components', './TocList.tsx')]
-          : [],
+      globalComponents: useOfficialComponent
+        ? []
+        : [path.join(__dirname, '../components/TocList.tsx')],
     },
   };
 }

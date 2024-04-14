@@ -2,10 +2,7 @@ import React, { useEffect, useId, useState } from 'react';
 
 import mermaid, { type MermaidConfig } from 'mermaid';
 
-export interface MermaidRendererProps {
-  code: string;
-  config?: MermaidConfig;
-}
+import type { MermaidRendererProps } from '../src/typings';
 
 const MermaidRenderer: React.FC<MermaidRendererProps> = (props) => {
   const { code, config = {} } = props;

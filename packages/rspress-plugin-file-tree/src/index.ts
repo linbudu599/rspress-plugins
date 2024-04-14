@@ -24,7 +24,7 @@ export default function rspressPluginFileTree(
         lang: 'tree',
         componentPath: path.join(
           __dirname,
-          './components/Tree/FileTreeRender.tsx',
+          '../components/Tree/FileTreeRender.tsx',
         ),
         propsProvider(code) {
           return {

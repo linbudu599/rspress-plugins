@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 
-import { loadOml2d, type Options as OnMyLive2DOptions } from 'oh-my-live2d';
+import { loadOml2d } from 'oh-my-live2d';
 
-export interface Live2DWidgetProps extends OnMyLive2DOptions {}
+import type { Live2DWidgetProps } from '../src/typings';
 
 const Live2DWidget: React.FC<Live2DWidgetProps> = (options) => {
   useEffect(() => {

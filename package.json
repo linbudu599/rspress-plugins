@@ -17,7 +17,7 @@
     "version": "changeset version && pnpm install --frozen-lockfile",
     "version:beta": "changeset pre enter beta && changeset version",
     "release": "pnpm build && changeset publish",
-    "release:beta": "pnpm build && changeset publish --tag && changeset pre exit"
+    "release:beta": "pnpm build && changeset publish"
   },
   "config": {
     "commitizen": {

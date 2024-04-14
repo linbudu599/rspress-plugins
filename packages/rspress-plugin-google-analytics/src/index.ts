@@ -28,7 +28,9 @@ export default function rspressPluginGoogleAnalytics(
     config(config, utils, isProd) {
       return config;
     },
-    globalUIComponents: [path.resolve(__dirname, './SendGTagEvent.tsx')],
+    globalUIComponents: [
+      path.resolve(__dirname, '../components/SendGTagEvent.tsx'),
+    ],
     builderConfig: {
       html: {
         tags: [
