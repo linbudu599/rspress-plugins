@@ -1,12 +1,10 @@
 # rspress-plugin-live2d ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-live2d)
 
-[简体中文](./README.zh-CN.md)
-
-Rspress plugin for live2d, powered by [on-my-live2d](https://oml2d.com/).
+Rspress 的看板娘插件, 基于 [on-my-live2d](https://oml2d.com/).
 
 ![example](image.png)
 
-## Usage
+## 使用
 
 ```bash
 npm install rspress-plugin-live2d
@@ -38,6 +36,6 @@ export default defineConfig({
 });
 ```
 
-## Configure
+## 配置
 
-Find more models and configuration on [On My Live2D](https://oml2d.com/guide/models.html).
+参考 [On My Live2D](https://oml2d.com/guide/models.html) 来查找更多模型和配置。

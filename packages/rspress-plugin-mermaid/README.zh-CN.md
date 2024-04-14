@@ -1,6 +1,6 @@
 # rspress-plugin-mermaid ![NPM Version](https://img.shields.io/npm/v/rspress-plugin-mermaid)
 
-为 Rspress 支持基于 [Mermaid](hhttps://mermaid.js.org/#/) 的流程图、时序图等图表。
+为 Rspress 支持基于 [Mermaid](https://mermaid.js.org/#/) 的流程图、时序图等图表。
 
 编写 Mermaid 图表时，只需使用 `mermaid` 代码块，插件会自动将其转换为 SVG。
 

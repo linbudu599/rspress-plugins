@@ -2,7 +2,7 @@
 
 [简体中文](./README.zh-CN.md)
 
-Rspress plugin to render mermaid diagrams in markdown files.
+Rspress plugin to render [Mermaid](https://mermaid.js.org/#/) diagrams in markdown files.
 
 Write mermaid as code blocks in markdown files and they will be rendered as SVGs:
 
