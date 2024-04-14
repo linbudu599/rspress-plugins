@@ -1,5 +1,16 @@
 # rspress-plugin-mermaid
 
+## 0.3.0
+
+### Minor Changes
+
+- 4001d0c: release latest
+
+### Patch Changes
+
+- Updated dependencies [4001d0c]
+  - rspress-plugin-devkit@0.3.0
+
 ## 0.2.0
 
 ### Minor Changes
