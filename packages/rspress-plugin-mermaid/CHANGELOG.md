@@ -1,5 +1,11 @@
 # rspress-plugin-mermaid
 
+## 0.1.4-beta.0
+
+### Patch Changes
+
+- df9cbfc: use static component ref
+
 ## 0.1.3
 
 ### Patch Changes
