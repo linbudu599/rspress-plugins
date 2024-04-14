@@ -1,7 +1,11 @@
 {
   "name": "rspress-plugin-file-tree",
-  "version": "0.1.3",
+  "version": "0.1.4-beta.0",
   "description": "Rspress plugin that add support for file tree component.",
+  "files": [
+    "dist",
+    "components"
+  ],
   "keywords": [
     "rspress",
     "plugin",
