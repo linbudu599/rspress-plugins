@@ -1,6 +1,6 @@
 {
   "name": "rspress-plugin-toc",
-  "version": "0.1.4-beta.1",
+  "version": "0.1.4-beta.2",
   "description": "Rspress plugin that add a table of contents to your document page.",
   "files": [
     "dist",

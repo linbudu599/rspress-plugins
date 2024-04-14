@@ -1,5 +1,11 @@
 # rspress-plugin-toc
 
+## 0.1.4-beta.2
+
+### Patch Changes
+
+- f87a288: fixup package
+
 ## 0.1.4-beta.1
 
 ### Patch Changes
