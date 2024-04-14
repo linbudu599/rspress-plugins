@@ -1,5 +1,12 @@
 # rspress-plugin-supersub
 
+## 0.1.3-beta.0
+
+### Patch Changes
+
+- Updated dependencies [2891f27]
+  - rspress-plugin-devkit@0.1.3-beta.0
+
 ## 0.1.2
 
 ### Patch Changes
