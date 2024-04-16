@@ -53,6 +53,9 @@ importers:
       npm-run-all:
         specifier: ^4.1.5
         version: 4.1.5
+      p-try:
+        specifier: ^3.0.0
+        version: 3.0.0
       prettier:
         specifier: ^3.2.5
         version: 3.2.5
@@ -8420,6 +8423,11 @@ packages:
   /p-try@2.2.0:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
+
+  /p-try@3.0.0:
+    resolution: {integrity: sha512-nD1xrH3cV2epQsO8pv6p28i/TdrzJQ5g73c41a+fu+3uhABdf7xujY58ebIuSrOQYxNb8WqNDpX6HjYl8P0KfQ==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: true
 
   /parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}

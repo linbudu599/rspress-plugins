@@ -20,14 +20,12 @@ A collection of plugins to extend the capabilities of [rspress](https://rspress.
 
 ### Themes
 
-- [rspress-plugin-back-to-top](./packages/rspress-plugin-back-to-top), configurable back-to-top button.
 - [rspress-plugin-live2d](./packages/rspress-plugin-live2d), add live2d model to your site.
 - [rspress-plugin-toc](./packages/rspress-plugin-toc), generate table of contents for your pages.
 - [rspress-plugin-reading-time](./packages/rspress-plugin-reading-time), calculate and display reading time for your pages.
 
 ### Site
 
-- [rspress-plugin-comment](./packages/rspress-plugin-comment), add comment system to your site.
 - [rspress-plugin-google-analytics](./packages/rspress-plugin-google-analytics), integrate Google Analytics in your site.
 - [rspress-plugin-vercel-analytics](./packages/rspress-plugin-vercel-analytics), integrate Vercel Analytics in your site.
 - [ ] rspress-plugin-sitemap
