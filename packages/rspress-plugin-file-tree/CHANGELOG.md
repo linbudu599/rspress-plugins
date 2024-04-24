@@ -1,5 +1,12 @@
 # rspress-plugin-file-tree
 
+## 0.4.0
+
+### Minor Changes
+
+- d05808f: support comment display
+- a6f7bdb: compat for number prefix and spaces
+
 ## 0.3.0
 
 ### Minor Changes

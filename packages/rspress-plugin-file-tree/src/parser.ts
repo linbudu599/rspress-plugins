@@ -1,6 +1,7 @@
 type TreeItem = {
   type: 'file' | 'directory';
   name: string;
+  extra?: string;
   files?: TreeItem[];
 };
 
@@ -22,13 +23,18 @@ export function parseInput(input: string): TreeItem[] {
 
     const level = countLeadingSpaces(line);
 
-    const name = line.trim().split(' ').slice(-1)[0];
+    const normalizedLine = line.split('─').slice(-1)[0].trimStart();
+
+    const [_, name, extra = ''] =
+      normalizedLine.match(/^(.*?)(?:\s*\/\/\s*(.*))?$/) ?? [];
 
     const nextLine = lines[i + 1] || '';
     const nextLineLevel = countLeadingSpaces(nextLine);
     const type = nextLineLevel > level ? 'directory' : 'file';
     const item: TreeItem =
-      type === 'directory' ? { type, name, files: [] } : { type, name };
+      type === 'directory'
+        ? { type, name, files: [], extra }
+        : { type, name, extra };
 
     while (stack.length > 0 && stack[stack.length - 1].level >= level) {
       stack.pop();
