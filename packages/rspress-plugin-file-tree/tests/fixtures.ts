@@ -1,9 +1,4 @@
-# Remark x File Tree
-
-Basic usage:
-
-```tree
-.
+export const normalTreeInput = `.
 ├── rspress.config.ts
 ├── src
 │   ├── components
@@ -25,12 +20,9 @@ Basic usage:
 │   ├── index.ts
 │   └── parser.ts
 └── tsconfig.json
-```
+`;
 
-With comment:
-
-
-```tree
+export const withCommentTreeInput = `.
 ├── rspress.config.ts // Rspress config
 ├── src
 │   ├── components // Shared components
@@ -52,5 +44,4 @@ With comment:
 │   ├── index.ts
 │   └── parser.ts // Parse string input to tree structure
 └── tsconfig.json
-```
-
+`;
