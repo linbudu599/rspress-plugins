@@ -23,8 +23,10 @@ export function parseInput(input: string): TreeItem[] {
 
     const level = countLeadingSpaces(line);
 
-    const extra = line.match(/\/\/\s*(.+)/)?.[1] ?? '';
-    const name = line.trim().split(' ').slice(-1)[0];
+    const normalizedLine = line.split('─').slice(-1)[0].trimStart();
+
+    const [_, name, extra = ''] =
+      normalizedLine.match(/^(.*?)(?:\s*\/\/\s*(.*))?$/) ?? [];
 
     const nextLine = lines[i + 1] || '';
     const nextLineLevel = countLeadingSpaces(nextLine);
